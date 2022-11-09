@@ -97,32 +97,23 @@
 .search-container .search-box {
   height: 100%;
   width: 100%;
-  border: none;
-  outline: none;
   background: #fff;
-  font-size: 18px;
   border-radius: 50px;
-  padding: 0 60px 0 20px;
   opacity: 0;
-  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.17,0.67,1,1.23);
 }
 .search-container .search-box.active {
   opacity: 1;
 }
 .search-box .search-input {
-  // height: 100%;
-  // width: 100%;
-  // border: none;
-  // outline: none;
-  // background: #fff;
-  // font-size: 18px;
-  // border-radius: 50px;
-  // padding: 0 60px 0 20px;
-  // opacity: 0;
-  // transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.search-container .search-input.active {
-  // opacity: 1;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 20px;
+  width: 220px;
+  border: none;
+  outline: none;
+  font-size: 18px;
 }
 .search-container .search-btn-a {
   // height: 50px;
