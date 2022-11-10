@@ -31,7 +31,10 @@
             class: "search-input",
             placeholder: "Find a friend"
           %>
-          <%= submit_tag "Search", class: "fas fa-search search-hide" %>
+          <%# <%= submit_tag "Search", class: "search-btn-query" %>
+          <%= button_tag :submit do %>
+            <i class="search-btn-query fas fa-search"></i>
+          <% end %>
         <% end %>
       </div>
 

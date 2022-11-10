@@ -9,12 +9,14 @@ export default class extends Controller {
     const searchInput = document.querySelector('.search-input');
 
     searchBtn.addEventListener('click', (event) => {
+      searchBtn.classList.add('disable');
       searchBox.classList.add('active');
       searchInput.classList.add('active');
       cancelBtn.classList.add('active');
     });
 
     cancelBtn.addEventListener('click', (event) => {
+      searchBtn.classList.remove('disable');
       searchBox.classList.remove('active');
       searchInput.classList.remove('active');
       cancelBtn.classList.remove('active');
