@@ -73,7 +73,9 @@
 
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link login" %>
+            <%= link_to new_user_session_path, class: "nav-link login" do %>
+              <i class="fa-solid fa-user"></i>
+            <% end %>
           </li>
         <% end %>
 
