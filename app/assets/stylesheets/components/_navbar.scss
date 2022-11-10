@@ -91,12 +91,14 @@
 .user-btn {
   color: #92B4EC;
   position: absolute;
-  // top: 50%;
-  // transform:translateY(-50%);
   right: 250px;
   font-size: 21px;
   cursor: pointer;
   z-index: 1;
+  transition: all 0.25s;
+}
+.user-btn:hover {
+  background-color: rgba(146, 180, 236, 0.1);
 }
 
 
