@@ -91,14 +91,25 @@
 .user-btn {
   color: #92B4EC;
   position: absolute;
-  right: 250px;
+  right: 245px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(146, 180, 236, 0);
+  border-radius: 50%;
   font-size: 21px;
   cursor: pointer;
   z-index: 1;
   transition: all 0.25s;
 }
 .user-btn:hover {
+  color: #92B4EC;
   background-color: rgba(146, 180, 236, 0.1);
+}
+.user-btn .fa-user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -123,7 +134,7 @@
 .search-container .search-box.active {
   width: 100%;
   opacity: 1;
-  transform: translateX(-20%);
+  transform: translateX(-22%);
 }
 .search-box .search-input {
   display: none;
@@ -153,7 +164,7 @@
 .search-container .search-btn-a {
   color: #92B4EC;
   position: absolute;
-  right: 285px;
+  right: 290px;
   font-size: 21px;
   text-align: center;
   width: 40px;
@@ -200,7 +211,7 @@
 .search-container .cancel-btn {
   color: #92B4EC;
   position: absolute;
-  right: 285px;
+  right: 290px;
   font-size: 26px;
   width: 40px;
   height: 40px;
