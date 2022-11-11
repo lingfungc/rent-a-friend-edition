@@ -1,4 +1,4 @@
-// NAVBAR LAYOUT
+// NAVBAR - Layout
 
 .navbar-container {
   margin: auto;
@@ -16,14 +16,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 600px;
+    width: 360px;
   }
 }
 
 
-// USER MENU
+// USER MENU - Layout
 // color: #92B4EC
 
+
+
+// USER MENU - Guest Mode
 .user-btn {
   color: #92B4EC;
   position: absolute;
@@ -49,7 +52,7 @@
 }
 
 
-// SEARCH FIELD
+// SEARCH FIELD - Layout
 // color: #92B4EC | rgb(217, 38, 93)
 
 .search-container {
@@ -59,6 +62,7 @@
   justify-content: flex-end;
   align-items: center;
 }
+// SEARCH FIELD - Search Box
 .search-container .search-box {
   height: 100%;
   width: 50px;
@@ -72,6 +76,7 @@
   opacity: 1;
   transform: translateX(-18%);
 }
+// SEARCH FIELD - Search Box Input Field
 .search-box .search-input {
   display: none;
   width: 0;
@@ -97,6 +102,7 @@
   font-size: 18px;
   opacity: 0.5;
 }
+// SEARCH FIELD - Search Btn
 .search-container .search-btn-a {
   color: #92B4EC;
   position: absolute;
@@ -128,6 +134,7 @@
   padding: 0;
   border-width: 0;
 }
+// SEARCH FIELD - Search Box Search Btn
 .search-container .search-btn-query {
   color: #92B4EC;
   position: absolute;
@@ -144,6 +151,7 @@
   opacity: 1;
   transition: all 0.25s ease;
 }
+// SEARCH FIELD - Search Box Cancel Btn
 .search-container .cancel-btn {
   color: #92B4EC;
   position: absolute;
