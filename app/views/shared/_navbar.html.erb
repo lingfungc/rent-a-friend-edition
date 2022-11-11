@@ -13,10 +13,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <%# figure out the functionality later %>
-    <div class="navbar-collapse collapse" id="navbarSupportedContent">
+    <%# grouping user-menu and search-field %>
+    <div class="navbar-opt collapse-X" id="navbarSupportedContent">
 
-      <%# search field %>
+      <%# search-field %>
       <div class="search-container" data-controller="search-field">
         <div class="search-btn-a">
           <i class="fas fa-search"></i>
@@ -35,6 +35,10 @@
             <i class="search-btn-query fas fa-search"></i>
           <% end %>
         <% end %>
+      </div>
+
+      <%# user-menu %>
+      <div class="user-menu">
 
         <ul class="navbar-nav me-auto">
           <% if user_signed_in? %>
@@ -70,16 +74,15 @@
             </div>
           </li>
 
-        <% else %>
-          <%= link_to new_user_session_path, class: "user-btn" do %>
-            <i class="fa-solid fa-user"></i>
+          <% else %>
+            <%= link_to new_user_session_path, class: "user-btn" do %>
+              <i class="fa-solid fa-user"></i>
+            <% end %>
           <% end %>
-        <% end %>
+        </ul>
 
       </div>
 
-
-      </ul>
     </div>
 
   </div>
