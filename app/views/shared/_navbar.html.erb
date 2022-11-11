@@ -40,10 +40,9 @@
       <%# user-menu %>
       <div class="user-menu">
 
-        <ul class="navbar-nav me-auto">
+        <div class="user-choice dropdown">
           <% if user_signed_in? %>
 
-          <li class="nav-item dropdown">
             <%# Comment: Sets a default avatar for new users
                           else show their profile picture %>
             <% if current_user.friends.empty? %>
@@ -56,7 +55,6 @@
               <%= link_to "Your Profile", user_path(current_user) , class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
-          </li>
 
           <%# if not a current user then link to sign up page for guest %>
           <% else %>
@@ -64,7 +62,7 @@
               <i class="fa-solid fa-user"></i>
             <% end %>
           <% end %>
-        </ul>
+        </div>
 
       </div>
 
