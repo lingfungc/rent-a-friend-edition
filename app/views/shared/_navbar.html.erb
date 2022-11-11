@@ -13,11 +13,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
+
     <%# grouping user-menu and search-field %>
-    <div class="navbar-opt collapse-X" id="navbarSupportedContent">
+    <div class="navbar-opt">
 
       <%# search-field %>
-      <div class="search-container" data-controller="search-field">
+      <div class="search-container collapse" data-controller="search-field">
         <div class="search-btn-a">
           <i class="fas fa-search"></i>
         </div>
@@ -38,7 +40,7 @@
       </div>
 
       <%# user-menu %>
-      <div class="user-menu">
+      <div class="user-menu collapse" id="navbarSupportedContent">
 
         <div class="user-choice">
           <% if user_signed_in? %>
@@ -52,7 +54,7 @@
 
             <%# dropdown menu with bootstrap css classes %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Your Profile", user_path(current_user) , class: "dropdown-item" %>
+              <%= link_to "Profile", user_path(current_user) , class: "dropdown-item" %>
               <%= link_to "Become a friend", new_friend_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
