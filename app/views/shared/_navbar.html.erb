@@ -31,7 +31,7 @@
       <% end %>
     </div>
 
-    <div class="dropdown-search-bar d-none" data-dropdown-search-target="bar">
+    <div class="dropdown-search-bar" data-dropdown-search-target="bar">
       <%= form_with url: friends_path, method: :get, class: "dropdown-search-box" do %>
         <%= text_field_tag :query,
           params[:query],

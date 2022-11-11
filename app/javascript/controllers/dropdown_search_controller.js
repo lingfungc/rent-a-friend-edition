@@ -10,6 +10,6 @@ export default class extends Controller {
 
   enable() {
     console.log("connected to enable function");
-    this.barTarget.classList.toggle("d-none");
+    this.barTarget.classList.toggle("active");
   };
 }
