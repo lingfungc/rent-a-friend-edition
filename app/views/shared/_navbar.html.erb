@@ -32,17 +32,20 @@
     </div>
 
     <div class="dropdown-search-bar" data-dropdown-search-target="bar">
-      <%= form_with url: friends_path, method: :get, class: "dropdown-search-box" do %>
-        <%= text_field_tag :query,
-          params[:query],
-          class: "search-input",
-          placeholder: "Find a friend"
-        %>
-        <%# <%= submit_tag "Search", class: "search-btn-query" %>
-        <%= button_tag :submit do %>
-          <i class="search-btn-query fas fa-search"></i>
+      <%# <div class="dropdown-search-box"> %>
+        <%= form_with url: friends_path, method: :get, class: "dropdown-search-box" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "dropdown-search-input",
+            placeholder: "Find a friend"
+          %>
+          <%# <%= submit_tag "Search", class: "search-btn-query" %>
+          <%= button_tag :submit do %>
+            <i class="dropdown-search-btn-query fas fa-search"></i>
+          <% end %>
+          <i class="dropdown-cancel fas fa-times"></i>
         <% end %>
-      <% end %>
+      <%# </div> %>
     </div>
 
     <%# grouping user-menu and search-field %>
