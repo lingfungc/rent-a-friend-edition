@@ -13,6 +13,9 @@ application.register("dropdown-search", DropdownSearchController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import LandingPageSlidersController from "./landing_page_sliders_controller"
+application.register("landing-page-sliders", LandingPageSlidersController)
+
 import MapController from "./map_controller"
 application.register("map", MapController)
 
