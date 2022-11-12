@@ -16,7 +16,6 @@
   display: flex;
   align-items: center;
 }
-
 .footer-links a {
   color: rgb(0, 0, 0);
   opacity: 0.15;
@@ -25,21 +24,15 @@
   padding: 0px 10px;
   transition: 0.5s;
 }
-
 .footer-links a:hover {
   opacity: 1;
   color: #ea0583f6;
 }
 
-.footer .fa-heart {
-  color: #D23333;
-}
-
 ul {
   list-style:none;
 }
-
-li {
-  float: right;
-  padding-right: 3px;
-}
+// li {
+//   float: right;
+//   padding-right: 3px;
+// }
