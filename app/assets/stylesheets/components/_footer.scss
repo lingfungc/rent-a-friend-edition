@@ -1,18 +1,22 @@
 .footer {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 160px;
-  padding: 0px 100px;
-  color: rgba(0,0,0,0.2);
   position: fixed;
   left: 0;
   bottom: 0;
+  background-color: white;
+  width: 100%;
+  height: 200px;
+  color: rgba(0,0,0,0.2);
 }
 
+.footer-content {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px auto;
+}
 .footer-contributors > ul {
+  list-style: none;
   transform: translateX(-8px);
 }
 
@@ -32,11 +36,3 @@
   opacity: 1;
   color: #ea0583f6;
 }
-
-ul {
-  list-style:none;
-}
-// li {
-//   float: right;
-//   padding-right: 3px;
-// }
