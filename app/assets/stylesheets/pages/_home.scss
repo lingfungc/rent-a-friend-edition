@@ -1,15 +1,13 @@
-// Specific CSS for your home-page
-// .home-banner {
-//   height: 800px;
-//   width: 100%;
-// }
+.hoem-container {
+  width: 100%;
+  margin: 20px auto;
+}
 
 .banner {
   background-size: cover;
   background-position: center;
   height: 88vh;
   padding: 150px 0;
-
   h1 {
     margin: 0;
     color: white;
@@ -17,7 +15,6 @@
     font-size: 100px;
     font-weight: bold;
   }
-
   p {
     font-size: 30px;
     color: white;
@@ -36,7 +33,6 @@
   // opacity: 0.6;
   transition: 0.7s ease;
 }
-
 .btn-ghost:hover {
   color: #EC058E;
   background-color: #FFFBFC;
