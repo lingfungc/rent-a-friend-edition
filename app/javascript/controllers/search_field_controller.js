@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
-    console.log('search-field js stimulus successfully connected');
+    console.log('Connected to Search Field Stimulus');
 
     const searchBtn = document.querySelector('.search-btn-a');
     const cancelBtn = document.querySelector('.cancel-btn');

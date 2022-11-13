@@ -5,11 +5,11 @@ export default class extends Controller {
   static targets = ["bar"];
 
   connect() {
-    console.log("connected to dropdown search js stimulus");
+    console.log('Connected to Dropdown Search Stimulus');
   };
 
   enable() {
-    console.log("connected to enable function");
+    console.log("Triggered Enable Function");
     this.barTarget.classList.toggle("active");
   };
 }
