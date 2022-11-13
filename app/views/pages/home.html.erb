@@ -1,21 +1,21 @@
 <div class="home-container">
 
-  <section aria-label="Film Photography">
-    <div class="carousel" data-carousel>
+  <section aria-label="background-slideshow">
+    <div class="carousel" data-controller="landing-page-sliders" data-carousel>
       <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
       <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
       <ul data-slides>
         <li class="slide" data-active>
-          <img src="images/victoria habour.jpg" alt='Hong Kong #1' style="width:100%">
-          <p class="slide-text">Victoria Habour</p>
+          <%= image_tag "Concert 2.jpg" %>
         </li>
         <li class="slide">
-          <img src="images/central.jpg" alt='Hong Kong #2' style="width:100%">
-          <p class="slide-text">Central</p>
+          <%= image_tag "Mates.jpg" %>
         </li>
         <li class="slide">
-          <img src="images/peng chau.jpg" alt='Hong Kong #3' style="width:100%">
-          <p class="slide-text">Peng Chau</p>
+          <%= image_tag "Share Feeling.jpg" %>
+        </li>
+        <li class="slide">
+          <%= image_tag "Become A Friend.jpg" %>
         </li>
       </ul>
     </div>

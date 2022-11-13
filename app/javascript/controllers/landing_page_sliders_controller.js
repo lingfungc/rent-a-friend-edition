@@ -3,7 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="landing-page-sliders"
 export default class extends Controller {
   connect() {
-    console.log("hello, javascript")
+    console.log('Connected to Landing Page Sliders Stimulus');
 
     const buttons = document.querySelectorAll("[data-carousel-button]");
 
