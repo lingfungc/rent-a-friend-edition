@@ -1,11 +1,12 @@
 .hoem-container {
-  // width: 100%;
-  // margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .home-banner {
   width: 100%;
-  height: calc(100vh - 92px);
+  // height: calc(100vh - 92px);
+  height: 1280px;
   background-image: url("Concert 2.jpg");
   background-size: cover;
   background-position: center;
@@ -59,10 +60,8 @@
 /* CAROUSEL SLIDERS */
 
 .carousel {
-  width: 90%;
-  height: 400px;
-  position: relative;
-  margin: 0 auto;
+  width: 100%;
+  height: 1280px;
 }
 .carousel > ul {
   margin: 0;
@@ -82,6 +81,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: brightness(80%);
   z-index: 1;
 }
 .slide-text {
@@ -112,18 +112,17 @@
   font-size: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  color: black;
   cursor: pointer;
-  /* border-radius: .25rem;
-  padding: 0 0.5rem;
-  background-color: rgba(0, 0, 0, 0.1); */
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.6;
   z-index: 2;
   transition: 0.3s ease;
 }
 .carousel-button:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.2);
-  opacity: 0.6;
+  opacity: 0.8;
 }
 /* .carousel-button:focus { */
   /* outline: 1px solid black; */
