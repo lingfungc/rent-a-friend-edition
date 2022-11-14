@@ -28,13 +28,22 @@
         <li class="slide">
           <%= image_tag "Share Feeling.jpg" %>
           <p class="slide-headline">Having a struggle in life and need a company?</p>
-          <%= link_to "friends#index", class: "btn btn-start" do %>
+          <%= link_to "friends#index", class: "btn btn-start btn-p" do %>
             <span>Start Here </span>
           <% end %>
         </li>
         <li class="slide">
           <%= image_tag "Become A Friend.jpg" %>
           <p class="slide-headline">Want to join us and Become A Friend?</p>
+          <% if user_signed_in? %>
+            <%= link_to new_friend_path, class: "btn btn-start btn-p" do %>
+              <span>Join Us </span>
+            <% end %>
+          <% else %>
+            <%= link_to new_user_session_path, class: "btn btn-start btn-p" do %>
+              <span>Sign Up </span>
+            <% end %>
+          <% end %>
         </li>
       </ul>
     </div>
