@@ -12,7 +12,9 @@
         <li class="slide" data-active>
           <%= image_tag "Concert 2.jpg" %>
           <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
-          <%= link_to "Start here", "friends#index", class: "btn btn-ghost" %>
+          <%= link_to "friends#index", class: "btn btn-start" do %>
+            <span>Start Here </span>
+          <% end %>
         </li>
         <li class="slide">
           <%= image_tag "Mates.jpg" %>
