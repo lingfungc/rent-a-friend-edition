@@ -34,27 +34,6 @@
   }
 }
 
-.btn-ghost {
-  color: #FFFBFC;
-  background-color: #EC058E;
-  border: 1px solid #FFFBFC;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  // opacity: 0.6;
-  transition: 0.7s ease;
-}
-.btn-ghost:hover {
-  color: #EC058E;
-  background-color: #FFFBFC;
-  border: 1px solid #EC058E;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  // opacity: 0.6;
-  transition: 0.7s ease;
-}
-
 
 
 /* CAROUSEL SLIDERS */
@@ -129,4 +108,51 @@
 }
 .carousel-button.next {
   right: 1rem;
+}
+.btn-start {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  width: 10%;
+  color: #FFFBFC;
+  background-color: #92B4EC;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: lighter;
+  font-size: 21px;
+  transition: 0.5s ease;
+  z-index: 4;
+}
+.btn-start:hover {
+  color: #92B4EC;
+  background-color: #FFFBFC;
+  padding: 8px 24px;
+  border-radius: 50px;
+}
+
+.btn-start span {
+  // cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.btn-start span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  // top: 0;
+  right: -10px;
+  transition: 0.3s ease;
+}
+
+.btn-start:hover span {
+  transform: translateX(4px);
+  padding-right: 18px;
+}
+
+.btn-start:hover span:after {
+  opacity: 1;
+  right: 0;
 }
