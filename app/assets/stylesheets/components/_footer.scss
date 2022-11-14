@@ -10,14 +10,18 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 0px;
+  padding: 20px 0px;
 }
 .footer-content .footer-contributors {
-  transform: translateY(8px);
+  width: 50%;
+  transform: translateY(6px);
 }
 .footer-contributors > ul {
-  list-style: none;
-  transform: translateX(-8px);
+  transform: translateX(-15px);
+  line-height: 1.75rem;
+}
+.footer-contributors a {
+  color: rgba(0,0,0,0.2);
 }
 
 .footer-links {
