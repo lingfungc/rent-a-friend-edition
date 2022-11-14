@@ -6,8 +6,10 @@
 
   <section aria-label="background-slideshow">
     <div class="carousel" data-controller="landing-page-sliders" data-carousel>
-      <button class="carousel-button prev" data-carousel-button="prev">&#10094;</button>
-      <button class="carousel-button next" data-carousel-button="next">&#10095;</button>
+      <div class="carousel-btn">
+        <button class="carousel-button prev left" data-carousel-button="prev">&#10094;</button>
+        <button class="carousel-button next right" data-carousel-button="next">&#10095;</button>
+      </div>
       <ul data-slides>
         <li class="slide" data-active>
           <%= image_tag "Concert 2.jpg" %>
