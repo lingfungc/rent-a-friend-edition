@@ -119,6 +119,8 @@
 .user-menu {
   width: 50px;
   height: 100%;
+  position: relative;
+  z-index: 6;
 }
 .user-menu .user-choice {
   width: 100%;
