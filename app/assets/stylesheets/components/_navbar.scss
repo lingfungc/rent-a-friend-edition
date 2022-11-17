@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30%;
+    width: 50%;
     height: 50px;
   }
 }
@@ -66,10 +66,6 @@
 }
 .dropdown-search-btn-query {
   color: #92B4EC;
-  // position: absolute;
-  // top: 50%;
-  // transform: translateY(-50%);
-  // right: 140px;
   font-size: 21px;
   width: 40px;
   height: 40px;
@@ -92,10 +88,6 @@
 }
 .dropdown-cancel {
   color: #92B4EC;
-  // position: relative;
-  // top: 50px;
-  // transform: translateY(-50%);
-  // right: 100px;
   font-size: 26px;
   width: 40px;
   height: 40px;
