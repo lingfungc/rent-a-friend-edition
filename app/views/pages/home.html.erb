@@ -1,7 +1,6 @@
 <div class="home-container">
 
   <%# <div class="home-banner">
-
   </div> %>
 
   <section aria-label="background-slideshow">
@@ -13,32 +12,40 @@
       <ul data-slides>
         <li class="slide" data-active>
           <%= image_tag "Concert 2.jpg" %>
-          <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
-          <%= link_to "friends#index", class: "btn btn-start" do %>
-            <span>Start Here </span>
-          <% end %>
+          <div class="slide-content">
+            <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
+            <%= link_to "friends#index", class: "btn btn-start" do %>
+              <span>Start Here </span>
+            <% end %>
+          </div>
         </li>
         <li class="slide">
           <%= image_tag "Mates.jpg" %>
-          <p class="slide-headline">Move to a new city and want a Friend to show you around a new town?</p>
-          <%= link_to "friends#index", class: "btn btn-start" do %>
-            <span>Start Here </span>
-          <% end %>
+          <div class="slide-content">
+            <p class="slide-headline">Move to a new city and want a Friend to show you around a new town?</p>
+            <%= link_to "friends#index", class: "btn btn-start" do %>
+              <span>Start Here </span>
+            <% end %>
+          </div>
         </li>
         <li class="slide">
           <%= image_tag "Share Feeling.jpg" %>
-          <p class="slide-headline">Having a struggle in life and need a company?</p>
-          <%= link_to "friends#index", class: "btn btn-start btn-p" do %>
-            <span>Start Here </span>
-          <% end %>
+          <div class="slide-content">
+            <p class="slide-headline">Having a struggle in life and need a company?</p>
+            <%= link_to "friends#index", class: "btn btn-start btn-p" do %>
+              <span>Start Here </span>
+            <% end %>
+          </div>
         </li>
         <li class="slide">
           <%= image_tag "Become A Friend.jpg" %>
-          <p class="slide-headline">Want to join us and Become A Friend?</p>
-          <% if user_signed_in? %>
-            <%= link_to new_friend_path, class: "btn btn-start btn-p" do %>
-              <span>Join Us </span>
-            <% end %>
+          <div class="slide-content">
+            <p class="slide-headline">Want to join us and Become A Friend?</p>
+            <% if user_signed_in? %>
+              <%= link_to new_friend_path, class: "btn btn-start btn-p" do %>
+                <span>Join Us </span>
+              <% end %>
+          </div>
           <% else %>
             <%= link_to new_user_session_path, class: "btn btn-start btn-p" do %>
               <span>Sign Up </span>
