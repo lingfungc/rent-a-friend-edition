@@ -49,8 +49,8 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: 600ms opacity ease-in-out;
-  transition-delay: 600ms;
+  transition: 1000ms opacity ease-in-out;
+  transition-delay: 1000ms;
 }
 .slide > img {
   display: block;
