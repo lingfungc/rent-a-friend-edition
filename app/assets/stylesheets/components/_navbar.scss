@@ -176,7 +176,7 @@
 .search-container .search-box.active {
   width: 100%;
   opacity: 1;
-  transform: translateX(-18%);
+  transform: translateX(-10%);
 }
 // SEARCH FIELD - Search Box Input Field
 .search-box .search-input {
@@ -279,4 +279,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1580px) {
+  .search-container .search-box.active {
+    transform: translateX(-12%);
+  }
+}
+@media (max-width: 1280px) {
+  .search-container .search-box.active {
+    transform: translateX(-15%);
+  }
+}
+@media (max-width: 1080px) {
+  .search-container .search-box.active {
+    transform: translateX(-18%);
+  }
 }
