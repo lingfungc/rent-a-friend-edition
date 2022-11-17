@@ -296,3 +296,13 @@
     transform: translateX(-18%);
   }
 }
+@media (max-width: 720px) {
+  .search-container .cancel-btn {
+    transform: translateX(12%);
+  }
+}
+@media (max-width: 640px) {
+  .search-container .cancel-btn {
+    transform: translateX(18%);
+  }
+}
