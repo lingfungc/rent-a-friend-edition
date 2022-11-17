@@ -1,4 +1,6 @@
-.hoem-container {
+// HOME - LAYIUT
+
+.home-container {
   width: 100%;
   margin: 0 auto;
 }
@@ -10,27 +12,6 @@
   background-image: url("Concert 2.jpg");
   background-size: cover;
   background-position: center;
-}
-
-
-.banner {
-  background-size: cover;
-  background-position: center;
-  height: 88vh;
-  padding: 150px 0;
-  h1 {
-    margin: 0;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 100px;
-    font-weight: bold;
-  }
-  p {
-    font-size: 30px;
-    color: white;
-    opacity: .7;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  }
 }
 
 
