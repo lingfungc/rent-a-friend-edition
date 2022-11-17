@@ -137,6 +137,15 @@
   }
 }
 
+@media (max-width: 800px) {
+  .slide-content {
+    margin-left: 1.25rem;
+  }
+  .slide-content > p {
+    font-size: 2rem;
+  }
+}
+
 @-webkit-keyframes rightarrow {
   0% { -webkit-transform: translateX(0); opacity: 0.7 }
   100% { -webkit-transform: translateX(0.3em); opacity: 0.9 }
