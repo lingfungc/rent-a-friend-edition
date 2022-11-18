@@ -297,6 +297,9 @@
   }
 }
 @media (max-width: 720px) {
+  .navbar-container {
+    width: 95%;
+  }
   .search-container .cancel-btn {
     transform: translateX(12%);
   }
