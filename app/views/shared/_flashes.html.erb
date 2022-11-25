@@ -1,15 +1,19 @@
 <% if notice %>
-  <div class="alert alert-info alert-dismissible fade show m-1" role="alert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    <%= notice %>
-  </div>
+  <%# <div class="flash-container"> %>
+    <%# <div class="alert alert-info alert-dismissible fade show m-1" role="alert"> %>
+      <%# <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> %>
+      <%# notice %>
+    <%# </div> %>
+  <%# </div> %>
 <% end %>
 
 <% if alert %>
-  <div class="alert alert-warning alert-dismissible fade show m-1" role="alert">
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    <%= alert %>
-  </div>
+  <%# <div class="flash-container"> %>
+    <%# <div class="alert alert-warning alert-dismissible fade show m-1" role="alert"> %>
+      <%# <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> %>
+      <%# alert %>
+    <%# </div> %>
+  <%# </div> %>
 <% end %>
 
 <div class="flash-container">
@@ -17,14 +21,20 @@
       <% flash.each do |type, msg| %>
         <% if msg.class == Array && msg.count > 1 %>
           <% msg.each do |m| %>
-            <div class="alert alert-<%= type %>">
+            <div class="alert-f alert-<%= type %>">
               <%= m %>
             </div>
           <% end %>
         <% else %>
-          <div class="alert alert-<%= type %>">
-            <%= msg %>
-          </div>
+          <% unless type.nil? %>
+            <div class="alert-f alert-<%= type %>">
+              <%= msg %>
+            </div>
+          <% else %>
+            <div class="alert-f alert-primary">
+              <%= msg %>
+            </div>
+          <% end %>
         <% end %>
       <% end %>
   <% end %>
