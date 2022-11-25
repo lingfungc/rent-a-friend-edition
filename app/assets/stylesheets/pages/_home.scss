@@ -35,6 +35,15 @@
   transition: 1000ms opacity ease-in-out;
   transition-delay: 1000ms;
 }
+.slide > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(70%);
+  z-index: 1;
+}
 .slide > img {
   display: block;
   width: 100%;
