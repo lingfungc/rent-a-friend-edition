@@ -5,14 +5,17 @@
   <%# <div class="home-banner">
   </div> %>
 
+  <%# image_tag "Concert 1.jpg" %>
+  <%= video_tag "Friends Toasting.mp4", controls: true %>
+
   <section aria-label="background-slideshow">
     <div class="carousel" data-controller="landing-page-sliders" data-carousel>
       <div class="carousel-btn">
         <button class="carousel-button prev left" data-carousel-button="prev">&#10094;</button>
         <button class="carousel-button next right" data-carousel-button="next">&#10095;</button>
       </div>
-      <ul data-slides>
-        <li class="slide" data-active>
+
+        <li class="slide" >
           <%= image_tag "Concert 2.jpg" %>
           <div class="slide-content">
             <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
