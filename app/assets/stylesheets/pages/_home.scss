@@ -22,7 +22,7 @@
 .carousel {
   width: 100%;
   min-height: 667px; // iPhone SE size screen
-  height: calc(100vh - 92px);
+  height: calc(100vh - 92px - 152px);
 }
 .carousel > ul {
   margin: 0;
