@@ -5,8 +5,6 @@
   <%# <div class="home-banner">
   </div> %>
 
-  <%# video_tag "Friends Toasting.mp4", autoplay: true, loop: true, muted: true %>
-
   <section aria-label="background-slideshow">
     <div class="carousel" data-controller="landing-page-sliders" data-carousel>
       <div class="carousel-btn">
@@ -15,6 +13,15 @@
       </div>
       <ul data-slides>
         <li class="slide" data-active>
+          <%= video_tag "Friends Toasting.mp4", autoplay: true, loop: true, muted: true %>
+          <div class="slide-content">
+            <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
+            <%= link_to "friends#index", class: "btn btn-start" do %>
+              <span>Start Here </span>
+            <% end %>
+          </div>
+        </li>
+        <li class="slide"e>
           <%= image_tag "Concert 2.jpg" %>
           <div class="slide-content">
             <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
