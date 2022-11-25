@@ -24,3 +24,6 @@ application.register("map", MapController)
 
 import SearchFieldController from "./search_field_controller"
 application.register("search-field", SearchFieldController)
+
+import VideoControlController from "./video_control_controller"
+application.register("video-control", VideoControlController)
