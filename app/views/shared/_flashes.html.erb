@@ -11,3 +11,21 @@
     <%= alert %>
   </div>
 <% end %>
+
+<div class="flash-container">
+  <% if flash.any? %>
+      <% flash.each do |type, msg| %>
+        <% if msg.class == Array && msg.count > 1 %>
+          <% msg.each do |m| %>
+            <div class="alert alert-<%= type %>">
+              <%= m %>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="alert alert-<%= type %>">
+            <%= msg %>
+          </div>
+        <% end %>
+      <% end %>
+  <% end %>
+</div>

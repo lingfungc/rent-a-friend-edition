@@ -33,6 +33,7 @@ class BookingsController < ApplicationController
       @booking.user = current_user
       @booking.friend = @friend
     else
+      flash[:danger] = "Please log in before making any booking."
       redirect_to user_session_path
     end
   end
