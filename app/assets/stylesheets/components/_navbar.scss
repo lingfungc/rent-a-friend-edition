@@ -241,6 +241,15 @@ $font-t: 'Outfit', sans-serif;
   transform: translate(-50%, -50%);
 }
 
+// Dropdown - Overwrite Bootstrap
+.dropdown-menu {
+  font-family: $font-t;
+  --bs-dropdown-padding-x: 0.125rem;
+  --bs-dropdown-padding-y: 0.75rem;
+  --bs-dropdown-spacer: 0.5rem;
+  --bs-dropdown-border-radius: 10px;
+  --bs-dropdown-link-color: rgba(0,0,0,0.5);
+}
 
 // Dropdown - Seach
 .dropdown-search {
