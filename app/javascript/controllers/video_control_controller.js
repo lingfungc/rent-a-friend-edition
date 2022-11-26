@@ -6,7 +6,20 @@ export default class extends Controller {
 
   connect() {
     console.log('Connected to Video Control Stimulus');
-    console.log(this.videoTarget);
+    console.log(this.videoTargets);
+  };
 
+  play() {
+    console.log('Mouseout on this slide');
+    this.videoTargets.forEach((target) => {
+      target.play();
+    });
+  }
+
+  pause() {
+    console.log('Mouseover on this slide');
+    this.videoTargets.forEach((target) => {
+      target.pause();
+    });
   }
 }
