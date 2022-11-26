@@ -70,7 +70,9 @@
       </div>
 
       <div class="navbar-right">
-        <%= link_to "See All Friends", friends_path, class: "navbar-friend" %>
+        <div class="navbar-friend">
+          <%= link_to "See All Friends", friends_path, class: "navbar-friend-link" %>
+        </div>
 
         <%# user-menu %>
         <div class="user-menu">
@@ -95,9 +97,11 @@
 
             <%# if not a current user then link to sign up page for guest %>
             <% else %>
-              <%= link_to new_user_session_path, class: "user-btn" do %>
-                <i class="fa-solid fa-user"></i>
-              <% end %>
+              <div class="user-btn">
+                <%= link_to new_user_session_path, class: "" do %>
+                  <i class="fa-solid fa-user"></i>
+                <% end %>
+              </div>
             <% end %>
           </div>
 

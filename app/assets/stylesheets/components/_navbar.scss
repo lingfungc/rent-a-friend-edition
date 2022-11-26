@@ -1,6 +1,8 @@
 // Styling Variables
 
 $theme-color: #92B4EC;
+$hover-color: rgba(146, 180, 236, 0.1);
+// $hover-color: rgba(128, 128, 128, 0.05);
 
 $navbar-h: 90px;
 $navbar-logo-h: 60px;
@@ -14,7 +16,7 @@ $fa-icon-container: 36px;
 $fa-icon-size: 1rem;
 $fa-icon-size-l: 1.25rem;
 
-$input-font-size: 1.2rem;
+$input-font-size: 1rem;
 $font-t: 'Outfit', sans-serif;
 
 
@@ -55,13 +57,30 @@ $font-t: 'Outfit', sans-serif;
   align-items: center;
 }
 .navbar-friend {
-  text-decoration: none;
   color: $theme-color;
   font-family: $font-t;
   font-weight: lighter;
   font-size: $input-font-size;
-  margin-right: 2rem;
+  text-align: center;
+  margin-right: 0.5rem;
+  background-color: rgba(146, 180, 236, 0);
+  height: $icon-btn-size;
+  padding: 0rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
   transition: 0.3s all;
+
+  &:hover {
+    background-color: $hover-color;
+  }
+
+  .navbar-friend-link {
+    color: $theme-color;
+    text-decoration: none;
+    width: 100%;
+    padding: 0.5rem 0rem;
+  }
 }
 
 // USER MENU - Layout
@@ -85,7 +104,6 @@ $font-t: 'Outfit', sans-serif;
 
 // USER MENU - Guest Mode
 .user-btn {
-  color: $theme-color;
   position: relative;
   width: $icon-btn-size;
   height: $icon-btn-size;
@@ -95,10 +113,15 @@ $font-t: 'Outfit', sans-serif;
   cursor: pointer;
   z-index: 1;
   transition: all 0.25s;
-}
-.user-btn:hover {
-  color: $theme-color;
-  background-color: rgba(146, 180, 236, 0.1);
+
+  &:hover {
+    color: $theme-color;
+    background-color: $hover-color;
+  }
+
+  .fa-user {
+    color: $theme-color;
+  }
 }
 .user-btn .fa-user {
   position: absolute;
