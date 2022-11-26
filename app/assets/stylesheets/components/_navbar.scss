@@ -6,7 +6,8 @@ $navbar-h: 90px;
 $navbar-logo-h: 60px;
 
 $navbar-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-$item-shadow: 0px 0px 8px rgba(0,0,0,0.1);
+$item-shadow: 0px 0px 5px rgba(0,0,0,0.05);
+$item-shadow-h: 0px 0px 7.5px rgba(0,0,0,0.15);
 
 $icon-btn-size: 50px;
 $fa-icon-container: 36px;
@@ -14,6 +15,7 @@ $fa-icon-size: 1rem;
 $fa-icon-size-l: 1.25rem;
 
 $input-font-size: 1.2rem;
+$font-t: 'Outfit', sans-serif;
 
 
 // Navbar - Layout
@@ -118,6 +120,9 @@ $input-font-size: 1.2rem;
   width: 100%;
   opacity: 1;
   // transform: translateX(-10%);
+  &:hover {
+    box-shadow: $item-shadow-h;
+  }
 }
 // SEARCH FIELD - Search Box Input Field
 .search-box .search-input {
@@ -139,6 +144,8 @@ $input-font-size: 1.2rem;
   background-color: rgba($color: #FFFFFF, $alpha: 0);
   border: none;
   outline: none;
+  font-family: $font-t;
+  color: $theme-color;
   font-size: $input-font-size;
   opacity: 1;
   transition: all 0.25s;
