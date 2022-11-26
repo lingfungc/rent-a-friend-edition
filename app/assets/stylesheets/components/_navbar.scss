@@ -35,88 +35,8 @@ $navbar-logo-h: 60px;
   }
 }
 
-// DROPDOWN - Seach
-.dropdown-search {
-  cursor: pointer;
-}
-.dropdown-search-bar {
-  position: fixed;
-  top: -92px;
-  left: 0;
-  background-color: white;
-  width: 100vw;
-  height: 92px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  transition: all 0.5s;
-}
-.dropdown-search-bar.active {
-  position: fixed;
-  top: 0;
-}
-.dropdown-search-box {
-  width: 80%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.dropdown-search-box button {
-  background-color: rgba(146, 180, 236, 0);
-}
-.dropdown-search-input {
-  width: 90%;
-  border: none;
-  outline: none;
-  background: #fff;
-  font-size: 18px;
-  border-bottom: 1px solid grey;
-  padding: 0 10px 2px 10px;
-}
-.dropdown-search-btn-query {
-  color: #92B4EC;
-  font-size: 21px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(146, 180, 236, 0);
-  border-radius: 50%;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.dropdown-search-btn-query:hover {
-  opacity: 1;
-  background-color: rgba(146, 180, 236, 0.1);
-}
-.dropdown-search-bar button {
-  padding: 0;
-  border-width: 0;
-}
-.dropdown-cancel {
-  color: #92B4EC;
-  font-size: 26px;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(146, 180, 236, 0);
-  border-radius: 50%;
-  opacity: 0.5;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.dropdown-cancel:hover {
-  opacity: 1;
-  background-color: rgba(146, 180, 236, 0.1);
-}
 
 // USER MENU - Layout
-// color: #92B4EC
 
 .user-menu {
   width: 50px;
@@ -134,8 +54,6 @@ $navbar-logo-h: 60px;
   align-items: center;
   cursor: pointer;
 }
-// USER MENU - Avatar (edit in avastar.scss)
-
 
 // USER MENU - Guest Mode
 .user-btn {
@@ -161,9 +79,10 @@ $navbar-logo-h: 60px;
   transform: translate(-50%, -50%);
 }
 
+// USER MENU - Avatar (edit in avastar.scss)
+
 
 // SEARCH FIELD - Layout
-// color: #92B4EC | rgb(217, 38, 93)
 
 .search-container {
   width: 90%;
@@ -289,6 +208,88 @@ $navbar-logo-h: 60px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+// Dropdown - Seach
+.dropdown-search {
+  cursor: pointer;
+}
+.dropdown-search-bar {
+  position: fixed;
+  top: -92px;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  transition: all 0.5s;
+}
+.dropdown-search-bar.active {
+  position: fixed;
+  top: 0;
+}
+.dropdown-search-box {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dropdown-search-box button {
+  background-color: rgba(146, 180, 236, 0);
+}
+.dropdown-search-input {
+  width: 90%;
+  border: none;
+  outline: none;
+  background: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid grey;
+  padding: 0 10px 2px 10px;
+}
+.dropdown-search-btn-query {
+  color: #92B4EC;
+  font-size: 21px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(146, 180, 236, 0);
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-search-btn-query:hover {
+  opacity: 1;
+  background-color: rgba(146, 180, 236, 0.1);
+}
+.dropdown-search-bar button {
+  padding: 0;
+  border-width: 0;
+}
+.dropdown-cancel {
+  color: #92B4EC;
+  font-size: 26px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(146, 180, 236, 0);
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown-cancel:hover {
+  opacity: 1;
+  background-color: rgba(146, 180, 236, 0.1);
+}
+
 
 // Screen Size
 
