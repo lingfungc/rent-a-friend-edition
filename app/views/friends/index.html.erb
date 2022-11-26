@@ -17,7 +17,9 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="friend-index-pic flip-card-front">
+              <% if f.photo.attached? %>
                 <a href="/friends/<%= f.id %>"><%= cl_image_tag f.photo.key, class: 'cl_img' %></a>
+              <% end %>
               </div>
             </div>
           </div>
