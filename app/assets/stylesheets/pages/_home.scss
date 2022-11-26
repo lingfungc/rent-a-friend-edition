@@ -1,3 +1,7 @@
+// Styling Variables
+
+$font-t: 'Outfit', sans-serif;
+
 // HOME - COLOR PALETTES !!
 
 // HOME - LAYIUT
@@ -63,7 +67,7 @@
 .slide-content > p {
   margin-block-start: 0em;
   margin-block-end: 0em;
-  font-family: 'Outfit', sans-serif;
+  font-family: $font-t;
   font-size: 3rem;
   color: white;
 }
@@ -105,7 +109,7 @@
   background-color: #92B4EC;
   padding: 8px 24px;
   border-radius: 50px;
-  font-family: 'Outfit', sans-serif;
+  font-family: $font-t;
   font-weight: lighter;
   font-size: 1.25rem;
   transition: 0.5s ease;
