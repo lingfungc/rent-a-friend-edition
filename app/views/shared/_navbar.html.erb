@@ -52,13 +52,7 @@
     <div class="navbar-opt">
 
       <%# search-field %>
-      <div class="search-container" data-controller="search-field">
-        <div class="search-btn-a">
-          <i class="fas fa-search"></i>
-        </div>
-        <div class="cancel-btn">
-          <i class="fas fa-times"></i>
-        </div>
+      <div class="search-container" data-controller="">
         <%= form_with url: friends_path, method: :get, class: "search-box" do %>
           <%= text_field_tag :query,
             params[:query],

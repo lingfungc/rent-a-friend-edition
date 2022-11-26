@@ -1,0 +1,23 @@
+    <%# grouping user-menu and search-field %>
+    <div class="navbar-opt">
+
+      <%# search-field %>
+      <div class="search-container" data-controller="search-field">
+        <div class="search-btn-a">
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <%= form_with url: friends_path, method: :get, class: "search-box" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "search-input",
+            placeholder: "Find a friend"
+          %>
+          <%# <%= submit_tag "Search", class: "search-btn-query" %>
+          <%= button_tag :submit do %>
+            <i class="search-btn-query fas fa-search"></i>
+          <% end %>
+        <% end %>
+      </div>
