@@ -48,6 +48,22 @@ $font-t: 'Outfit', sans-serif;
 }
 
 
+//  Navbar - See Friends
+.navbar-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-friend {
+  text-decoration: none;
+  color: $theme-color;
+  font-family: $font-t;
+  font-weight: lighter;
+  font-size: $input-font-size;
+  margin-right: 2rem;
+  transition: 0.3s all;
+}
+
 // USER MENU - Layout
 
 .user-menu {
@@ -100,6 +116,9 @@ $font-t: 'Outfit', sans-serif;
   width: 25%;
   min-width: 12rem;
   height: $icon-btn-size;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0 auto;
 }
 // SEARCH FIELD - Search Box
