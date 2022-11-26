@@ -6,12 +6,12 @@ $navbar-h: 90px;
 $navbar-logo-h: 60px;
 
 $navbar-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-$item-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+$item-shadow: 0px 0px 8px rgba(0,0,0,0.1);
 
 $icon-btn-size: 50px;
-$fa-icon-container: 40px;
-$fa-icon-size: 1.3rem;
-$fa-icon-size-l: 1.6rem;
+$fa-icon-container: 36px;
+$fa-icon-size: 1rem;
+$fa-icon-size-l: 1.25rem;
 
 $input-font-size: 1.2rem;
 
@@ -108,7 +108,8 @@ $input-font-size: 1.2rem;
   border-radius: 50px;
   box-shadow: $item-shadow;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 1rem 0 1.5rem;
   align-items: center;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.17,0.67,1,1.23);
@@ -132,9 +133,9 @@ $input-font-size: 1.2rem;
   // top: 50%;
   // transform: translateY(-50%);
   // margin-left: 20px;
-  width: 10rem;
+  width: 90%;
+  // min-width: 10rem;
   // width: 220px;
-  // width: calc(12rem - $icon-btn-size);
   background-color: rgba($color: #FFFFFF, $alpha: 0);
   border: none;
   outline: none;
@@ -177,20 +178,30 @@ $input-font-size: 1.2rem;
 .search-container button {
   padding: 0;
   border-width: 0;
+  background-color: rgba(0,0,0,0);
 }
 // SEARCH FIELD - Search Box Search Btn
 .search-container .search-btn-query {
-  color: $theme-color;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-52%);
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-52%);
   // right: 18px;
-  font-size: $fa-icon-size;
-  text-align: center;
+  width: $fa-icon-container;
+  height: $fa-icon-container;
+  background-color: $theme-color;
   border-radius: 50px;
-  opacity: 0.5;
+  box-shadow: $item-shadow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
   cursor: pointer;
   transition: all 0.25s ease;
+
+  .fa-search {
+    color: white;
+    font-size: $fa-icon-size;
+  }
 }
 .search-container .search-btn-query:hover {
   opacity: 1;

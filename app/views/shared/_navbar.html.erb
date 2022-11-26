@@ -60,9 +60,11 @@
             placeholder: "Find a friend"
           %>
           <%# <%= submit_tag "Search", class: "search-btn-query" %>
-          <%= button_tag :submit do %>
-            <i class="search-btn-query fas fa-search"></i>
-          <% end %>
+          <div class="search-btn-query">
+            <%= button_tag :submit do %>
+              <i class="fas fa-search"></i>
+            <% end %>
+          </div>
         <% end %>
       </div>
 
