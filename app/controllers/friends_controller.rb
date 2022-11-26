@@ -4,6 +4,7 @@ class FriendsController < ApplicationController
     if params[:query].present?
       @friends = Friend.search_by_categories_and_location_and_age(params[:query])
     else
+      # redirect_to root_path
       @friends = Friend.all
     end
 
