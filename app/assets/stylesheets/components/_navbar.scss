@@ -2,8 +2,13 @@
 
 $theme-color: #92B4EC;
 
-$navbar-h: 80px;
+$navbar-h: 90px;
 $navbar-logo-h: 60px;
+
+$navbar-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+$item-shadow: 0px 0px 8px rgba(0,0,0,0.05);
+
+$icon-btn-size: 50px;
 
 
 // Navbar - Layout
@@ -12,7 +17,7 @@ $navbar-logo-h: 60px;
   // background-color: #92B4EC;
   // border-bottom: #FFFFFF 1px solid;
   height: $navbar-h;
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  box-shadow: $navbar-shadow;
 }
 
 .navbar-container {
@@ -31,7 +36,7 @@ $navbar-logo-h: 60px;
     justify-content: space-between;
     align-items: center;
     width: 30%;
-    height: 50px;
+    height: $icon-btn-size;
   }
 }
 
@@ -39,7 +44,7 @@ $navbar-logo-h: 60px;
 // USER MENU - Layout
 
 .user-menu {
-  width: 50px;
+  width: $icon-btn-size;
   height: 100%;
   position: relative;
   z-index: 6;
@@ -59,8 +64,8 @@ $navbar-logo-h: 60px;
 .user-btn {
   color: #92B4EC;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: $icon-btn-size;
+  height: $icon-btn-size;
   background-color: rgba(146, 180, 236, 0);
   border-radius: 50%;
   font-size: 21px;
@@ -86,7 +91,7 @@ $navbar-logo-h: 60px;
 
 .search-container {
   width: 90%;
-  height: 50px;
+  height: $icon-btn-size;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -95,9 +100,10 @@ $navbar-logo-h: 60px;
 // SEARCH FIELD - Search Box
 .search-container .search-box {
   height: 100%;
-  width: 50px;
+  width: $icon-btn-size;
   background: #fff;
   border-radius: 50px;
+  box-shadow: $item-shadow;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.17,0.67,1,1.23);
 }

@@ -53,10 +53,10 @@
 
       <%# search-field %>
       <div class="search-container" data-controller="">
-        <%= form_with url: friends_path, method: :get, class: "search-box" do %>
+        <%= form_with url: friends_path, method: :get, class: "search-box active" do %>
           <%= text_field_tag :query,
             params[:query],
-            class: "search-input",
+            class: "search-input active",
             placeholder: "Find a friend"
           %>
           <%# <%= submit_tag "Search", class: "search-btn-query" %>
