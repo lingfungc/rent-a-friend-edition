@@ -13,43 +13,47 @@
       </div>
       <ul data-slides data-controller="video-control">
         <li class="slide" data-active>
-          <%= video_tag "Selfie.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
+          <%= video_tag "Friends 2.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
           <div class="slide-content">
             <p class="slide-headline">Are you looking for a Friend tp hang out with you?</p>
             <%= link_to "friends#index", class: "btn btn-start" do %>
-              <span>Start Here </span>
+              <span>Find a Friend </span>
             <% end %>
           </div>
         </li>
-        <li class="slide"e>
-          <%= image_tag "Concert 2.jpg" %>
+        <li class="slide">
+          <%= video_tag "Hiking.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
+          <%# image_tag "Concert 2.jpg" %>
           <div class="slide-content">
             <p class="slide-headline">Are you looking for a Friend who share the same hobbies with you?</p>
             <%= link_to "friends#index", class: "btn btn-start" do %>
-              <span>Start Here </span>
+              <span>Find a Friend </span>
             <% end %>
           </div>
         </li>
         <li class="slide">
-          <%= image_tag "Mates.jpg" %>
+          <%= video_tag "Selfie.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
+          <%# image_tag "Mates.jpg" %>
           <div class="slide-content">
             <p class="slide-headline">Move to a new city and want a Friend to show you around a new town?</p>
             <%= link_to "friends#index", class: "btn btn-start" do %>
-              <span>Start Here </span>
+              <span>Find a Friend </span>
             <% end %>
           </div>
         </li>
         <li class="slide">
-          <%= image_tag "Share Feeling.jpg" %>
+          <%= video_tag "Company.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
+          <%# image_tag "Share Feeling.jpg" %>
           <div class="slide-content">
             <p class="slide-headline">Having a struggle in life and need a company?</p>
             <%= link_to "friends#index", class: "btn btn-start btn-p" do %>
-              <span>Start Here </span>
+              <span>Find a Friend </span>
             <% end %>
           </div>
         </li>
         <li class="slide">
-          <%= image_tag "Become A Friend.jpg" %>
+          <%# image_tag "Become A Friend.jpg" %>
+          <%= video_tag "Team.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
           <div class="slide-content">
             <p class="slide-headline">Want to join us and Become A Friend?</p>
             <% if user_signed_in? %>
