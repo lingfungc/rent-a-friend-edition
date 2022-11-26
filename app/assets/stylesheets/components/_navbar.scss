@@ -8,6 +8,8 @@ $navbar-h: 90px;
 $navbar-logo-h: 60px;
 
 $navbar-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+$search-shadow: 0px 0px 7.5px rgba(0,0,0,0.1);
+$search-shadow-h: 0px 0px 7.5px rgba(0,0,0,0.2);
 $item-shadow: 0px 0px 10px rgba(0,0,0,0.15);
 $item-shadow-h: 0px 0px 10px rgba(0,0,0,0.3);
 
@@ -159,7 +161,7 @@ $font-t: 'Outfit', sans-serif;
   // width: $icon-btn-size;
   background: #fff;
   border-radius: 50px;
-  box-shadow: $item-shadow;
+  box-shadow: $search-shadow;
   display: flex;
   justify-content: space-between;
   padding: 0 1rem 0 1.5rem;
@@ -172,7 +174,7 @@ $font-t: 'Outfit', sans-serif;
   opacity: 1;
   // transform: translateX(-10%);
   &:hover {
-    box-shadow: $item-shadow-h;
+    box-shadow: $search-shadow-h;
   }
 }
 // SEARCH FIELD - Search Box Input Field
