@@ -4,7 +4,6 @@ class FriendsController < ApplicationController
     if params[:query].present?
       @friends = Friend.search_by_categories_and_location_and_age(params[:query])
     else
-      # redirect_to root_path
       @friends = Friend.all
     end
 
@@ -31,6 +30,7 @@ class FriendsController < ApplicationController
   def create
     @friend = Friend.new(friend_params)
     @friend.user = current_user
+    raise
     if @friend.save
       redirect_to friend_path(@friend)
     else

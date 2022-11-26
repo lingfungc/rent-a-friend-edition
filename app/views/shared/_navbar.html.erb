@@ -76,11 +76,11 @@
           <% if user_signed_in? %>
 
             <%# user profile pic for existing urser and a default avater for new user %>
-            <% if current_user.friends.empty? %>
+            <%# if current_user.friends.empty? %>
                 <%= image_tag "https://images.unsplash.com/photo-1633536838356-80807d2321d4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3x2YjVhQ1RjTVhQUXx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=900&q=60",  class: "avatar", alt: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% else %>
-                <%= cl_image_tag current_user.friends.first.photo.key, class: "avatar", alt: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% end %>
+            <%# else %>
+                <%# cl_image_tag current_user.friends.first.photo.key, class: "avatar", alt: "avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%# end %>
 
             <%# dropdown menu with bootstrap css classes %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
