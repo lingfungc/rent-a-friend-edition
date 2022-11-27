@@ -14,12 +14,23 @@ export default class extends Controller {
     this.videoTargets.forEach((target) => {
       target.play();
     });
-  }
+  };
 
   pause() {
     console.log('Mouseover on this slide');
     this.videoTargets.forEach((target) => {
       target.pause();
     });
-  }
+  };
+
+  playPause() {
+    console.log('Clicked on this slide');
+    this.videoTargets.forEach((target) => {
+      if (target.paused) {
+        target.play();
+      } else {
+        target.pause();
+      }
+    });
+  };
 }
