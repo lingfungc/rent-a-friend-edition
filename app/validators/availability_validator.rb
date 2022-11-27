@@ -1,5 +1,4 @@
-class AvailabilitiyValidator < ActiveModel::EachValidator
-
+class AvailabilityValidator < ActiveModel::EachValidator
   # record = the qureied friend instance
   # attribute = either start_date or end_date which is what we want to check and validate
   # value = whatever is currently assigned to start_date and end_date
