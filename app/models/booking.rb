@@ -2,7 +2,6 @@ class Booking < ApplicationRecord
   belongs_to :friend
   belongs_to :user
 
-  # validates :start_date, :end_date, presence: true, availability: true
   validates :start_date, :end_date, presence: true, availability: true
   # validates_with AvailabilityValidator
 
