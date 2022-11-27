@@ -11,7 +11,8 @@
         <button class="carousel-button prev left" data-carousel-button="prev">&#10094;</button>
         <button class="carousel-button next right" data-carousel-button="next">&#10095;</button>
       </div>
-      <ul data-slides data-controller="video-control" data-action="mouseout->video-control#pause mouseover->video-control#play">
+      <%# <ul data-slides data-controller="video-control" data-action="mouseout->video-control#pause mouseover->video-control#play"> %>
+      <ul data-slides data-controller="video-control" data-action="click->video-control#playPause">
         <li class="slide" data-active>
           <%= video_tag "Friends 2.mp4", autoplay: true, loop: true, muted: true, data: { video_control_target: "video" } %>
           <div class="slide-content">
