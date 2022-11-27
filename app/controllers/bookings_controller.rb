@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @friend.daily_rate
     @booking.user = current_user
     @booking.friend = @friend
-    if @booking.save!
+    if @booking.save
       redirect_to user_path(@booking.user)
     else
       render 'friends/show', status: :unprocessable_entity
