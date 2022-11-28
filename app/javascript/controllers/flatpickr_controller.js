@@ -34,7 +34,7 @@ export default class extends Controller {
           minDate.setDate(minDate.getDate() + 1);
           endDateCalendar.set('minDate', minDate);
           endDateInput.disabled = false;
-          console.log(endDateInput.disabled);
+          // console.log(endDateInput.disabled);
         }
       });
 
@@ -48,6 +48,26 @@ export default class extends Controller {
         }
       );
     }
+
+    let calendars = document.querySelectorAll(".flatpickr-calendar");
+    console.log(calendars);
+
+    let endDateCalendar = calendars[calendars.length - 1];
+    console.log(endDateCalendar);
+
+    startDateInput.addEventListener('change', (e) => {
+      let calendars = document.querySelectorAll(".flatpickr-calendar");
+      console.log(calendars);
+
+      let endDateCalendar = calendars[calendars.length - 1];
+      console.log(endDateCalendar);
+
+      const startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
+      console.log(startDate);
+
+      const selectedStartDate = startDate[startDate.length - 1];
+      selectedStartDate.classList.add('startDate');
+    })
   }
   // };
 }
