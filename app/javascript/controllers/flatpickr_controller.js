@@ -6,12 +6,6 @@ export default class extends Controller {
   connect() {
     console.log("Connected to flatpickr");
 
-    // flatpickr("#myID", {
-    //   enableTime: true,
-    //   dateFormat: "Y-m-d H:i",
-    // });
-
-    // const toggleDateInputs = function() {
     const startDateInput = document.getElementById('booking_start_date');
     const endDateInput = document.getElementById('booking_end_date');
 
@@ -34,26 +28,19 @@ export default class extends Controller {
           minDate.setDate(minDate.getDate() + 1);
           endDateCalendar.set('minDate', minDate);
           endDateInput.disabled = false;
-          // console.log(endDateInput.disabled);
         }
       });
 
-    const endDateCalendar =
-      flatpickr(endDateInput, {
-        // not sure why altInput is not working with disabled function in the booking form
-        // altInput: true,
-        // altFormat: "d/m/Y, D",
-        dateFormat: 'Y-m-d',
-        disable: unavailableDates,
+      const endDateCalendar =
+        flatpickr(endDateInput, {
+          // not sure why altInput is not working with disabled function in the booking form
+          // altInput: true,
+          // altFormat: "d/m/Y, D",
+          dateFormat: 'Y-m-d',
+          disable: unavailableDates,
         }
       );
     }
-
-    let calendars = document.querySelectorAll(".flatpickr-calendar");
-    console.log(calendars);
-
-    let endDateCalendar = calendars[calendars.length - 1];
-    console.log(endDateCalendar);
 
     startDateInput.addEventListener('change', (e) => {
       let calendars = document.querySelectorAll(".flatpickr-calendar");
@@ -62,12 +49,29 @@ export default class extends Controller {
       let endDateCalendar = calendars[calendars.length - 1];
       console.log(endDateCalendar);
 
-      const startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
+      let startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
       console.log(startDate);
 
-      const selectedStartDate = startDate[startDate.length - 1];
+      let selectedStartDate = startDate[startDate.length - 1];
+      selectedStartDate.classList.add('startDate');
+    })
+
+    const prevMonth = document.querySelectorAll(".flatpickr-prev-month");
+    console.log(prevMonth);
+
+    prevMonth[prevMonth.length - 1].addEventListener('click', (event) => {
+
+      let calendars = document.querySelectorAll(".flatpickr-calendar");
+      console.log(calendars);
+
+      let endDateCalendar = calendars[calendars.length - 1];
+      console.log(endDateCalendar);
+
+      let startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
+      console.log(startDate);
+
+      let selectedStartDate = startDate[startDate.length - 1];
       selectedStartDate.classList.add('startDate');
     })
   }
-  // };
 }
