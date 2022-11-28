@@ -20,6 +20,7 @@ $fa-icon-size-l: 1.25rem;
 
 $input-font-size: 1rem;
 $font-t: 'Outfit', sans-serif;
+$container-h: calc(100vh - 92px - 152px + 2.5px);
 
 
 // HOME - COLOR PALETTES !!
@@ -45,7 +46,7 @@ $font-t: 'Outfit', sans-serif;
 .carousel {
   width: 100%;
   min-height: 667px; // iPhone SE size screen
-  height: calc(100vh - 92px - 152px);
+  height: $container-h;
 }
 .carousel > ul {
   margin: 0;

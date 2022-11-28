@@ -32,10 +32,8 @@ class BookingsController < ApplicationController
       @booking.total_price = (@booking.end_date - @booking.start_date + 1) * @friend.daily_rate
       @booking.user = current_user
       @booking.friend = @friend
-      unless @booking.valid?
-        # flash[:danger] = @booking.errors.full_messages
-        render 'friends/show', status: :unprocessable_entity
-      end
+      # make sure the start_date and end_date are valid before link to the confirmation page
+      render 'friends/show', status: :unprocessable_entity unless @booking.valid?
     else
       flash[:danger] = "Please log in before making any booking."
       redirect_to user_session_path
