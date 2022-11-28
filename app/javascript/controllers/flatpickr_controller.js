@@ -7,10 +7,10 @@ export default class extends Controller {
     console.log("Connected to flatpickr");
     console.log("Testing");
 
-    flatpickr("#myID", {
-      enableTime: true,
-      dateFormat: "Y-m-d H:i",
-    });
+    // flatpickr("#myID", {
+    //   enableTime: true,
+    //   dateFormat: "Y-m-d H:i",
+    // });
 
     // const toggleDateInputs = function() {
       const startDateInput = document.getElementById('booking_start_date');
