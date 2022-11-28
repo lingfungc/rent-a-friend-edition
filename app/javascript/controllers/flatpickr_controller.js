@@ -42,6 +42,8 @@ export default class extends Controller {
       );
     }
 
+    // need to use react.js to fix start date not highlighted after clicking next/prev month
+
     startDateInput.addEventListener('change', (e) => {
       let calendars = document.querySelectorAll(".flatpickr-calendar");
       console.log(calendars);
