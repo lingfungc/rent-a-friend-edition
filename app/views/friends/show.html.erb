@@ -32,26 +32,27 @@
           <div class="col">
             <div data-controller="day-counter" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
             <%# data-action="change->day-counter#counter" %>
-              <%= simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
-                  <%= f.input :start_date, as: :date, html5: true %>
-                  <%= f.input :end_date, as: :date, html5: true %>
-                  <%= f.submit "Reserve", class: "btn btn-flat" %>
-              <% end %>
+              <%# simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
+                  <%# f.input :start_date, as: :date, html5: true %>
+                  <%# f.input :end_date, as: :date, html5: true %>
+                  <%# f.submit "Reserve", class: "btn btn-flat" %>
+              <%# end %>
             </div>
           </div>
 
+          <div class="widget-content" data-unavailable="<%= @friend.unavailable_dates.to_json %>"></div>
+
           <div class="col">
-            <div data-controller="flatpickr" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
+            <div data-controller="day-counter flatpickr" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
             <%# data-action="change->day-counter#counter" %>
               <%= simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
                 <%= f.input :start_date, as: :string, label: "Dates", placeholder: "From", wrapper_html: { class: "inline_field_wrapper" }, class: "flatpickr flatpickr-input" %>
                 <%= f.input :end_date, as: :string, label: '&nbsp;'.html_safe, placeholder: "To", disabled: true, wrapper_html: { class: "inline_field_wrapper" }, class: "flatpickr flatpickr-input" %>
                 <%= f.submit "Reserve", class: "btn btn-flat" %>
               <% end %>
+              <%# <input class="flatpickr flatpickr-input" id="myID" type="text" placeholder="Select Date..."> %>
             </div>
           </div>
-
-          <input class="flatpickr flatpickr-input" id="myID" type="text" placeholder="Select Date...">
 
           <hr>
 
