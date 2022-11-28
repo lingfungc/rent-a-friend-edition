@@ -24,8 +24,76 @@ $font-t: 'Outfit', sans-serif;
 
 .flatpickr-calendar {
   font-family: $font-t;
+  padding: 1rem;
+  border-radius: 25px;
+  box-shadow: $search-shadow;
 
   .flatpickr-months {
-    margin: 1rem 0;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    height: 3rem;
+
+    .flatpickr-month {
+      display: flex;
+      align-items: center;
+      height: auto;
+      width: 100%;
+    }
+
+    .flatpickr-current-month {
+      font-size: 120%;
+      position: relative;
+      left: auto;
+      height: auto;
+      width: 100%;
+      margin-left: 0.45rem;
+      padding: 0;
+    }
+
+    .flatpickr-prev-month {
+      position: relative;
+      top: auto;
+      height: fit-content;
+      padding-left: 1rem;
+    }
+
+    .flatpickr-next-month {
+      position: relative;
+      top: auto;
+      height: fit-content;
+      padding-right: 1rem;
+    }
+
+    .flatpickr-disabled {
+      display: inline;
+      z-index: 0;
+      opacity: 0;
+    }
+
+    .flatpickr-day selected {
+      background-color: $theme-color;
+      border-color: $theme-color;
+    }
+  }
+}
+
+.dayContainer {
+
+  .flatpickr-day {
+    transition: 0.2s all;
+
+    &:hover {
+      background: $theme-color;
+    }
+  }
+  .flatpickr-disabled {
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  .startDate {
+    background: rgba(146, 180, 236, 0.25);
   }
 }
