@@ -39,7 +39,7 @@ export default class extends Controller {
 
       const endDateCalendar =
         flatpickr(endDateInput, {
-          dateFormat: 'd-m-Y',
+          dateFormat: 'Y-m-d',
           disable: unavailableDates
           }
         );
