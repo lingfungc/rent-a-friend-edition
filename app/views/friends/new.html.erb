@@ -8,9 +8,9 @@
   <%= x.input :last_name, label: "Last Name:" %>
   <%= x.input :age, collection: 18..100 %>
   <%= x.input :location, label: "Hometown:" %>
-  <%= x.input :pronouns, label: "Preferred Pronouns:", placeholder: "  /  " %>
-  <%= x.input :categories, collection: @categories, include_hidden: false, label: "Friend capacity:" %>
-  <%= x.input :bio, placeholder: "Write a little bit about yourself..." %>
+  <%= x.input :pronouns, collection: @pronouns, label: "Preferred Pronouns:" %>
+  <%= x.input :categories, collection: @categories, include_hidden: false, label: "Friend Preferrence" %>
+  <%= x.input :bio, placeholder: "Write a little bit about yourself ..." %>
   <%= x.input :photo, as: :file %>
   <%= x.input :daily_rate, label: "How much do you want to charge per day?", as: :float , placeholder: "£" %>
   <%= x.submit "Submit 😎" %>

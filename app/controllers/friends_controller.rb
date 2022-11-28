@@ -24,7 +24,8 @@ class FriendsController < ApplicationController
 
   def new
     @friend = Friend.new
-    @categories = %w[sports music funeral family date travel]
+    @pronouns = Friend::PRONOUNS
+    @categories = Friend::CATRGORIES
   end
 
   def create
