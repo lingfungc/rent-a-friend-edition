@@ -24,6 +24,7 @@ $font-t: 'Outfit', sans-serif;
 
 .flatpickr-calendar {
   font-family: $font-t;
+  width:fit-content;
   padding: 1rem;
   border-radius: 25px;
   box-shadow: $search-shadow;
