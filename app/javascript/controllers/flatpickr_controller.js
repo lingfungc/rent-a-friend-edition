@@ -7,22 +7,25 @@ export default class extends Controller {
     console.log("Connected to flatpickr");
     console.log("Testing");
 
-  //   flatpickr("#myID", {
-  //     enableTime: true,
-  //     dateFormat: "Y-m-d H:i",
-  //   });
+    flatpickr("#myID", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+    });
 
-    const toggleDateInputs = function() {
+    // const toggleDateInputs = function() {
       const startDateInput = document.getElementById('booking_start_date');
+      console.log(startDateInput);
       const endDateInput = document.getElementById('booking_end_date');
+      console.log(endDateInput);
 
       if (startDateInput && endDateInput) {
-        const unvailableDates = JSON.parse(document.querySelector('.widget-content').dataset.unavailable)
+        const unavailableDates = JSON.parse(document.querySelector('.widget-content').dataset.unavailable)
+        console.log(unavailableDates);
 
         flatpickr(startDateInput, {
           minDate: 'today',
-          dateFormat: 'd-m-Y',
-          disable: unvailableDates,
+          dateFormat: 'Y-m-d',
+          disable: unavailableDates,
           onChange: function(selectedDates, selectedDate) {
             if (selectedDate === '') {
               endDateInput.disabled = true;
@@ -34,15 +37,15 @@ export default class extends Controller {
           }
         });
 
-        const endDateCalendar =
-          flatpickr(endDateInput, {
-            dateFormat: 'd-m-Y',
-            disable: unvailableDates
-            }
-          );
+      const endDateCalendar =
+        flatpickr(endDateInput, {
+          dateFormat: 'd-m-Y',
+          disable: unavailableDates
+          }
+        );
       };
     };
-  };
+  // };
 }
 
-export { toggleDateInputs }
+// export { toggleDateInputs }
