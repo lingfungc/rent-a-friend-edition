@@ -14,13 +14,13 @@ export default class extends Controller {
 
     // const toggleDateInputs = function() {
       const startDateInput = document.getElementById('booking_start_date');
-      console.log(startDateInput);
+      // console.log(startDateInput);
       const endDateInput = document.getElementById('booking_end_date');
-      console.log(endDateInput);
+      // console.log(endDateInput);
 
       if (startDateInput && endDateInput) {
         const unavailableDates = JSON.parse(document.querySelector('.widget-content').dataset.unavailable)
-        console.log(unavailableDates);
+        // console.log(unavailableDates);
 
         flatpickr(startDateInput, {
           minDate: 'today',
