@@ -150,7 +150,7 @@ $font-t: 'Outfit', sans-serif;
   width: 25%;
   min-width: 12rem;
   height: $icon-btn-size;
-  position: fixed;
+  position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin: 0 auto;
