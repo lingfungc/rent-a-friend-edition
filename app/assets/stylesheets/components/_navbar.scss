@@ -57,31 +57,36 @@ $font-t: 'Outfit', sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.navbar-friend {
-  color: $theme-color;
-  font-family: $font-t;
-  font-weight: lighter;
-  font-size: $input-font-size;
-  text-align: center;
-  margin-right: 0.5rem;
-  background-color: rgba(146, 180, 236, 0);
-  height: $icon-btn-size;
-  padding: 0rem 1rem;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  transition: 0.3s all;
 
-  &:hover {
-    background-color: $hover-color;
+  .navbar-friend {
+    color: $theme-color;
+    font-family: $font-t;
+    font-weight: lighter;
+    font-size: $input-font-size;
+    text-align: center;
+    margin-right: 0.25rem;
+    background-color: rgba(146, 180, 236, 0);
+    height: $icon-btn-size;
+    padding: 0rem 1rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s all;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+
+    .navbar-friend-link {
+      color: $theme-color;
+      text-decoration: none;
+      width: 100%;
+      padding: 0.5rem 0rem;
+    }
   }
 
-  .navbar-friend-link {
-    color: $theme-color;
-    text-decoration: none;
-    width: 100%;
-    padding: 0.5rem 0rem;
+  .margin-r {
+    margin-right: 0.75rem;
   }
 }
 

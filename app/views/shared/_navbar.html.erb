@@ -71,7 +71,10 @@
 
       <div class="navbar-right">
         <div class="navbar-friend">
-          <%= link_to "See All Friends", friends_path, class: "navbar-friend-link" %>
+          <%= link_to "See Friends", friends_path, class: "navbar-friend-link" %>
+        </div>
+        <div class="navbar-friend margin-r">
+          <%= link_to "Become a Friend", new_friend_path, class: "navbar-friend-link" %>
         </div>
 
         <%# user-menu %>
@@ -91,7 +94,7 @@
               <%# dropdown menu with bootstrap css classes %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Profile", user_path(current_user) , class: "dropdown-item" %>
-                <%= link_to "Become a friend", new_friend_path, class: "dropdown-item" %>
+                <%# link_to "Become a friend", new_friend_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
               </div>
 
