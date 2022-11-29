@@ -9,39 +9,49 @@
 
 <div class="filter-container" data-controller="filter-highlight">
 
-    <div class="filter-opt">
-      <%= form_with url: friends_path, method: :get do %>
-        <%= text_field_tag :trending,
-          params[:trending],
-          value: "top20",
-          class: 'd-none'
-        %>
-        <div class="">
-          <%= button_tag :submit, class: "filter-btn" do %>
-            <i class="fa-solid fa-brands fa-hotjar"></i>
-            <%= "Trending" %>
-            <hr>
-          <% end %>
-        </div>
+  <div class="filter-opt">
+    <div class="">
+      <%= link_to friends_path, class: "filter-btn" do %>
+        <i class="fa-solid fa-globe"></i>
+        <p>All Friends</p>
+        <hr>
       <% end %>
     </div>
+  </div>
 
-    <div class="filter-opt">
-      <%= form_with url: friends_path, method: :get do %>
-        <%= text_field_tag :new,
-          params[:new],
-          value: "new20",
-          class: 'd-none'
-        %>
-        <div class="">
-          <%= button_tag :submit, class: "filter-btn" do %>
-            <i class="fa-solid fa-id-badge"></i>
-            <%= "New Joiners" %>
-            <hr>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+  <div class="filter-opt">
+    <%= form_with url: friends_path, method: :get do %>
+      <%= text_field_tag :trending,
+        params[:trending],
+        value: "top20",
+        class: 'd-none'
+      %>
+      <div class="">
+        <%= button_tag :submit, class: "filter-btn" do %>
+          <i class="fa-solid fa-brands fa-hotjar"></i>
+          <%= "Trending" %>
+          <hr>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="filter-opt">
+    <%= form_with url: friends_path, method: :get do %>
+      <%= text_field_tag :new,
+        params[:new],
+        value: "new20",
+        class: 'd-none'
+      %>
+      <div class="">
+        <%= button_tag :submit, class: "filter-btn" do %>
+          <i class="fa-solid fa-id-badge"></i>
+          <%= "New Joiners" %>
+          <hr>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 
   <% i = 0 %>
   <% Friend::CATEGORIES.each do |category| %>
