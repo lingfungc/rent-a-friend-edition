@@ -25,7 +25,7 @@ class Friend < ApplicationRecord
     end
   end
 
-  scope :filter_by_categories, -> (catagories) { where("catagories LIKE ?", catagories) }
+  # scope :filter_by_categories, -> (catagories) { where("catagories LIKE ?", catagories) }
 
   # include Filterable
 

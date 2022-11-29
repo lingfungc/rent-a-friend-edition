@@ -11,9 +11,9 @@
 
     <div class="filter-opt">
       <%= form_with url: friends_path, method: :get do %>
-        <%= text_field_tag :categories,
-          params[:categories],
-          value: "Trending",
+        <%= text_field_tag :trending,
+          params[:trending],
+          value: "top20",
           class: 'd-none'
         %>
         <div class="">
@@ -28,9 +28,9 @@
 
     <div class="filter-opt">
       <%= form_with url: friends_path, method: :get do %>
-        <%= text_field_tag :categories,
-          params[:categories],
-          value: "newly",
+        <%= text_field_tag :new,
+          params[:new],
+          value: "new20",
           class: 'd-none'
         %>
         <div class="">

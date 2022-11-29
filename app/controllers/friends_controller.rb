@@ -5,9 +5,25 @@ class FriendsController < ApplicationController
 
     # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
 
+    @friends = Friend.all
+
+    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%") if params[:categories].present?
+
+    if params[:trending].present?
+      @friends = Friend.joins(:bookings)
+                       .select('friends.*, count(bookings) as friend_booking')
+                       .group('friends.id')
+                       .order('friend_booking desc')
+                       .limit(20)
+    end
+
+    if params[:new].present?
+      @friends = Friend.order('created_at desc')
+                       .limit(20)
+    end
+
     @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%") if params[:categories].present?
     @friends = Friend.search_by_categories_and_location_and_age(params[:query]) if params[:query].present?
-    @friends = Friend.all if !params[:categories].present? && !params[:query].present?
     # raise
 
     @markers = @friends.geocoded.map do |friend|
@@ -44,19 +60,19 @@ class FriendsController < ApplicationController
 
   private
 
-  def friend_params
-    params.require(:friend).permit(:first_name,
-                                   :last_name,
-                                   :age,
-                                   :location,
-                                   :pronouns,
-                                   :bio,
-                                   :daily_rate,
-                                   :user_id,
-                                   :categories, # change :catagories to catagories: []
-                                   :photo,
-                                   :rating)
-  end
+    def friend_params
+      params.require(:friend).permit(:first_name,
+                                    :last_name,
+                                    :age,
+                                    :location,
+                                    :pronouns,
+                                    :bio,
+                                    :daily_rate,
+                                    :user_id,
+                                    :categories, # change :catagories to catagories: []
+                                    :photo,
+                                    :rating)
+    end
 end
 
 # Test code here:
