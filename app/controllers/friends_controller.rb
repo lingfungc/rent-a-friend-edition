@@ -5,7 +5,7 @@ class FriendsController < ApplicationController
 
     # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
 
-    @friends = Friend.where("categories LIKE ?", "%#{params[:categories]}%") if params[:categories].present?
+    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%") if params[:categories].present?
     @friends = Friend.search_by_categories_and_location_and_age(params[:query]) if params[:query].present?
     @friends = Friend.all if !params[:categories].present? && !params[:query].present?
     # raise

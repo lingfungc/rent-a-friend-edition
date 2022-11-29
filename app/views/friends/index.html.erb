@@ -7,7 +7,7 @@
       <div class="search-container" data-controller="">
         <%= form_with url: friends_path, method: :get, class: "search-box active" do %>
           <%= text_field_tag :categories,
-            params[:query],
+            params[:categories],
             class: "search-input active",
             placeholder: "Find a friend",
             required: true
