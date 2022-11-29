@@ -47,6 +47,7 @@ $font-t: 'Outfit', sans-serif;
       color: $theme-color;
       opacity: 0.7;
       transition: 0.3s all;
+      text-decoration: none;
 
       &:hover {
         opacity: 1;
@@ -60,6 +61,11 @@ $font-t: 'Outfit', sans-serif;
         font-size: 1.75rem;
         margin: 0 auto;
         margin-bottom: 0.75rem;
+      }
+
+      p {
+        margin: 0 auto;
+        width: fit-content;
       }
 
       hr {
