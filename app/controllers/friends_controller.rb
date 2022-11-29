@@ -14,7 +14,7 @@ class FriendsController < ApplicationController
       {
         lat: friend.latitude,
         lng: friend.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {friend: friend}),
+        info_window: render_to_string(partial: "info_window", locals: { friend: friend }),
         image_url: helpers.asset_url("Mapping.png")
       }
     end
@@ -34,11 +34,10 @@ class FriendsController < ApplicationController
   def create
     @friend = Friend.new(friend_params)
     @friend.user = current_user
-    # raise
     if @friend.save
       redirect_to friend_path(@friend)
     else
-      @categories = %w[sports music funeral family date travel]
+      @categories = Friend::CATRGORIES
       render :new, status: :unprocessable_entity
     end
   end
