@@ -23,7 +23,8 @@ $font-t: 'Outfit', sans-serif;
 
 .filter-container {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0 auto;
+  margin-top: 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +36,7 @@ $font-t: 'Outfit', sans-serif;
   }
 
   .filter-opt {
-    width: 5rem;
+    width: 6rem;
     height: 5rem;
 
     .filter-btn {
