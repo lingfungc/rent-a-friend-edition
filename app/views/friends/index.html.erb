@@ -2,24 +2,8 @@
 
   <%# <h1 class="index_title">Available Friends</h1> %>
 
-  <div class="container filter-opt">
-
-      <div class="search-container" data-controller="">
-        <%= form_with url: friends_path, method: :get, class: "search-box active" do %>
-          <%= text_field_tag :categories,
-            params[:categories],
-            class: "search-input active",
-            placeholder: "Find a friend",
-            required: true
-          %>
-          <%# <%= submit_tag "Search", class: "search-btn-query" %>
-          <div class="search-btn-query">
-            <%= button_tag :submit do %>
-              <i class="fas fa-search"></i>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+  <div class="container">
+    <%= render 'filterbar' %>
   </div>
 
   <div class="container d-none">

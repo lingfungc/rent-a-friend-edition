@@ -1,0 +1,21 @@
+<% icons = ['<i class="fa-solid fa-futbol"></i>'] %>
+
+<div class="filter-container" data-controller="">
+
+  <div class="filter-opt">
+    <%= form_with url: friends_path, method: :get do %>
+      <%= text_field_tag :categories,
+        params[:categories],
+        value: Friend::CATEGORIES[0],
+        class: 'd-none'
+      %>
+      <div class="filter-btn">
+        <%= button_tag :submit do %>
+          <%= sanitize icons[0] %>
+          <%= Friend::CATEGORIES[0] %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+</div>
