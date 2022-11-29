@@ -181,7 +181,7 @@ people.each do |p|
     user: user,
     first_name: p['first_name'],
     last_name: p['last_name'],
-    categories: Friend::CATRGORIES.sample,
+    categories: Friend::CATEGORIES.sample,
     age: p['age'],
     location: p['location'],
     daily_rate: Faker::Number.decimal(l_digits: 2),
