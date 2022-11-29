@@ -37,37 +37,45 @@ $font-t: 'Outfit', sans-serif;
   .filter-opt {
     width: 5rem;
     height: 5rem;
-  }
 
-  .filter-btn {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    font-family: $font-t;
-    color: $theme-color;
-    opacity: 0.7;
-    transition: 0.3s all;
+    .filter-btn {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      font-family: $font-t;
+      color: $theme-color;
+      opacity: 0.7;
+      transition: 0.3s all;
 
-    &:hover {
+      &:hover {
+        opacity: 1;
+
+        hr {
+          opacity: 1;
+        }
+      }
+
+      .fa-solid {
+        font-size: 1.75rem;
+        margin: 0 auto;
+        margin-bottom: 0.75rem;
+      }
+
+      hr {
+        margin: 0.75rem auto;
+        border-top: 2px solid $theme-color;
+        opacity: 0;
+        width: 80%;
+        transition: 0.3s all;
+      }
+    }
+
+    .hover-active {
       opacity: 1;
 
       hr {
         opacity: 1;
       }
-    }
-
-    .fa-solid {
-      font-size: 1.75rem;
-      margin: 0 auto;
-      margin-bottom: 0.75rem;
-    }
-
-    hr {
-      margin: 0.75rem auto;
-      border-top: 2px solid $theme-color;
-      opacity: 0;
-      width: 80%;
-      transition: 0.3s all;
     }
   }
 }
