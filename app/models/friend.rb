@@ -25,6 +25,10 @@ class Friend < ApplicationRecord
     end
   end
 
+  scope :filter_by_categories, -> (catagories) { where("catagories LIKE ?", catagories) }
+
+  # include Filterable
+
   include PgSearch::Model
   pg_search_scope :search_by_categories_and_location_and_age,
   against: [ :categories, :location, :age ],

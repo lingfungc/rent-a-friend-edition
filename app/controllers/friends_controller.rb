@@ -1,11 +1,14 @@
 class FriendsController < ApplicationController
   def index
     # @friends = Friend.all
-    if params[:query].present?
-      @friends = Friend.search_by_categories_and_location_and_age(params[:query])
-    else
-      @friends = Friend.all
-    end
+    # @friends = Friend.filter(params.slice(:catagories))
+
+    # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
+
+    @friends = Friend.where("categories LIKE ?", "%#{params[:categories]}%") if params[:categories].present?
+    @friends = Friend.search_by_categories_and_location_and_age(params[:query]) if params[:query].present?
+    @friends = Friend.all if !params[:categories].present? && !params[:query].present?
+    # raise
 
     @markers = @friends.geocoded.map do |friend|
       {
