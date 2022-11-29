@@ -10,6 +10,9 @@ application.register("day-counter", DayCounterController)
 import DropdownSearchController from "./dropdown_search_controller"
 application.register("dropdown-search", DropdownSearchController)
 
+import FilterHighlightController from "./filter_highlight_controller"
+application.register("filter-highlight", FilterHighlightController)
+
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
