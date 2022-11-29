@@ -20,8 +20,8 @@ class FriendsController < ApplicationController
                        .limit(20)
     end
 
-    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%") if params[:categories].present?
-    @friends = Friend.search_by_categories_and_location_and_age(params[:query]) if params[:query].present?
+    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%").order('updated_at desc') if params[:categories].present?
+    @friends = Friend.search_by_categories_and_location_and_age(params[:query]).order('updated_at desc') if params[:query].present?
     # raise
 
     @markers = @friends.geocoded.map do |friend|
