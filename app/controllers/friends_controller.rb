@@ -5,9 +5,7 @@ class FriendsController < ApplicationController
 
     # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
 
-    @friends = Friend.all
-
-    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%") if params[:categories].present?
+    @friends = Friend.order('updated_at desc')
 
     if params[:trending].present?
       @friends = Friend.joins(:bookings)
