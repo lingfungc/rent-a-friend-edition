@@ -1,6 +1,6 @@
 class Friend < ApplicationRecord
   PRONOUNS = ['She/her', 'He/him', 'They/them', 'Ze/zir']
-  CATEGORIES = %w[Sports Music Family Date Travel Funeral Others]
+  CATEGORIES = %w[Sports Music Family Date Travel Funeral]
 
   belongs_to :user
   has_one_attached :photo                   # Attach images linked in Cloudinary

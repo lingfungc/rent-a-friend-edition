@@ -1,8 +1,16 @@
-<% icons = ['<i class="fa-solid fa-futbol"></i>'] %>
+<% icons = [
+  '<i class="fa-solid fa-futbol"></i>',
+  '<i class="fa-solid fa-guitar"></i>',
+  '<i class="fa-solid fa-house"></i>',
+  '<i class="fa-solid fa-champagne-glasses"></i>',
+  '<i class="fa-solid fa-car-side"></i>',
+  '<i class="fa-solid fa-cross"></i>'
+] %>
 
 <div class="filter-container" data-controller="">
 
 
+  <% i = 0 %>
   <% Friend::CATEGORIES.each do |category| %>
     <div class="filter-opt">
       <%= form_with url: friends_path, method: :get do %>
@@ -13,8 +21,9 @@
         %>
         <div class="filter-btn">
           <%= button_tag :submit do %>
-            <%= sanitize icons[0] %>
-            <%= Friend::CATEGORIES[0] %>
+            <%= sanitize icons[i] %>
+            <% i += 1 %>
+            <%= category %>
           <% end %>
         </div>
       <% end %>
