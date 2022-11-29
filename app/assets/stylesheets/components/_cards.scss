@@ -5,7 +5,7 @@
 // FFD24C
 
 $font-t: 'Outfit', sans-serif;
-$font-c: 'Mandali', sans-serif;
+$font-c: 'Nunito', sans-serif;
 
 .cards {
   display: grid;
@@ -77,12 +77,29 @@ $font-c: 'Mandali', sans-serif;
 
         .friend-name {
           font-size: 1.05rem;
+          font-weight: 600;
           color: black;
           margin-bottom: 0.1rem;
         }
       }
-
     }
+
+    .card-friend-info-r {
+      display: flex;
+      align-items: center;
+      height: 1.25rem;
+
+      .friend-star {
+        font-size: 0.75rem;
+        margin-right: 0.25rem;
+      }
+    }
+  }
+
+  .friend-price {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-bottom: 0.1rem;
   }
 
   &:hover {
