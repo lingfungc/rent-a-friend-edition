@@ -9,7 +9,6 @@
 
 <div class="filter-container" data-controller="">
 
-
   <% i = 0 %>
   <% Friend::CATEGORIES.each do |category| %>
     <div class="filter-opt">
@@ -19,11 +18,12 @@
           value: category,
           class: 'd-none'
         %>
-        <div class="filter-btn">
-          <%= button_tag :submit do %>
+        <div class="">
+          <%= button_tag :submit, class: "filter-btn" do %>
             <%= sanitize icons[i] %>
             <% i += 1 %>
             <%= category %>
+            <hr>
           <% end %>
         </div>
       <% end %>
