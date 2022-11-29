@@ -28,7 +28,7 @@ class FriendsController < ApplicationController
   def new
     @friend = Friend.new
     @pronouns = Friend::PRONOUNS
-    @categories = Friend::CATRGORIES
+    @categories = Friend::CATEGORIES
   end
 
   def create
@@ -37,7 +37,7 @@ class FriendsController < ApplicationController
     if @friend.save
       redirect_to friend_path(@friend)
     else
-      @categories = Friend::CATRGORIES
+      @categories = Friend::CATEGORIES
       render :new, status: :unprocessable_entity
     end
   end
