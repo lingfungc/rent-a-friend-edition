@@ -192,7 +192,7 @@ people.each do |p|
   puts "friend: #{friend.id} created!"
 
   file = URI.open(p['image_url'])
-  friend.photo.attach(io: file, filename: "#{user.username}.jpg", content_type: "image/jpg")
+  friend.photos.attach(io: file, filename: "#{user.username}.jpg", content_type: "image/jpg")
   friend.save
   puts "Image created!"
 end
