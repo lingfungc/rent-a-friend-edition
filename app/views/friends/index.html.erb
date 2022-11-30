@@ -13,7 +13,7 @@
 
   <div class="body-container">
 
-    <div class="cards">
+    <div class="cards" data-controller="friends-photos-slideshow">
       <% @friends.each do |f| %>
 
         <%= link_to friend_path(f) do %>
