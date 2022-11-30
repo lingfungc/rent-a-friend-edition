@@ -4,8 +4,9 @@
 
  <div class="friend-card-top">
     <div class="friend-img">
-      <!-- Friend' image is not yet created !-->
-      <%= cl_image_tag @friend.photo.key, class: 'cl_img'  %>
+      <% @friend.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, class: 'cl_img'  %>
+      <% end %>
     </div>
 
     <div class="friend-info">
