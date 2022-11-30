@@ -19,7 +19,7 @@
         <%= link_to friend_path(f) do %>
           <div class="card-friends">
 
-            <% if f.photo.attached? %>
+            <% if f.photos.attached? %>
               <div class="friend-pic">
                 <%= cl_image_tag(f.photo.key) %>
               </div>

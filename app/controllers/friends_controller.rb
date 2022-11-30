@@ -68,8 +68,8 @@ class FriendsController < ApplicationController
                                     :daily_rate,
                                     :user_id,
                                     :categories, # change :catagories to catagories: []
-                                    photos: [],  # friend cam have multiple images
-                                    :rating)
+                                    :rating,
+                                    photos: [])  # friend cam have multiple images
     end
 end
 
