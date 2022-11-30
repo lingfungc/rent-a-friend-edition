@@ -3,7 +3,7 @@ class Friend < ApplicationRecord
   CATEGORIES = %w[Sports Music Family Date Travel Funeral]
 
   belongs_to :user
-  has_one_attached :photo                   # Attach images linked in Cloudinary
+  has_many_attached :photos                   # Attach images linked in Cloudinary
   has_many :bookings, dependent: :destroy   # Destroy bookings when friend is deleted
   geocoded_by :location                     # Mapping the location attribute of friend
   after_validation :geocode, if: :will_save_change_to_location?
