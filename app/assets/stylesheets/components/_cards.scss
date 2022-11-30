@@ -46,6 +46,30 @@ $font-c: 'Nunito', sans-serif;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
+// Extra Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1880px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+// Extra Extra Extra large devices (large desktops, 1200px and up)
+@media (min-width: 2400px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+// Extra Extra Extra Extra large devices (large desktops, 1200px and up)
+@media (min-width: 2800px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}// Extra Extra Extra Extra Extra large devices (large desktops, 1200px and up)
+@media (min-width: 3160px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
 
 .card-friends {
   height: 400px;
