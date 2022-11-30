@@ -21,7 +21,9 @@
 
             <% if f.photos.attached? %>
               <div class="friend-pic">
-                <%= cl_image_tag(f.photo.key) %>
+                <% f.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key %>
+                <% end %>
               </div>
             <% end %>
 
