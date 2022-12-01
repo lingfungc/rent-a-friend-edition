@@ -18,16 +18,23 @@
 
         <div class="card-friends" data-photo-slideshow>
 
-          <div class="photos-btn">
-            <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="photos-button next" data-photo-button="next"><i class="fa-solid fa-angle-right"></i></button>
-          </div>
+          <% if f.photos.count > 1 %>
+            <div class="photos-btn btn-opacity" data-action="mouseout->friends-photos-slideshow#hideBtn mouseover->friends-photos-slideshow#showBtn" data-friends-photos-slideshow-target="btn">
+              <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
+                <%= link_to "spacer", friend_path(f), class: 'link-spacer' %>
+              <button class="photos-button next" data-photo-button="next"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+          <% else %>
+            <div class="photos-btn">
+                <%= link_to "spacer", friend_path(f), class: 'link-spacer' %>
+            </div>
+          <% end %>
 
           <%= link_to friend_path(f) do %>
 
             <% if f.photos.attached? %>
-              <div class="friend-pic">
-                <div data-photo-slides>
+              <div class="friend-pic" data-action="mouseout->friends-photos-slideshow#hideBtn mouseover->friends-photos-slideshow#showBtn">
+                <div class="friend-pic-wrapper" data-photo-slides>
                   <% f.photos.each_with_index do |photo, i| %>
                     <% if i == 0 %>
                       <div class="p-slide" data-active>
