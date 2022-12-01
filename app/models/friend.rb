@@ -14,6 +14,17 @@ class Friend < ApplicationRecord
   validates :categories, inclusion: { in: CATEGORIES }
   validates :age, numericality: { only_integer: true, greater_than_or_equal_to: 18 }
   validates :daily_rate, numericality: { greater_than: 0 }
+  validate :photos_count_limit
+
+  include PgSearch::Model
+  pg_search_scope :search_by_categories_and_location_and_age,
+  against: [ :categories, :location, :age ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
+
+  # scope :filter_by_categories, -> (catagories) { where("catagories LIKE ?", catagories) }
+  # include Filterable
 
   def unavailable_dates
     # Use .pluck get the values from the hash by the given keys
@@ -25,14 +36,12 @@ class Friend < ApplicationRecord
     end
   end
 
-  # scope :filter_by_categories, -> (catagories) { where("catagories LIKE ?", catagories) }
+  private
 
-  # include Filterable
+  def photos_count_limit
+    return if photos.count <= 5
 
-  include PgSearch::Model
-  pg_search_scope :search_by_categories_and_location_and_age,
-  against: [ :categories, :location, :age ],
-  using: {
-    tsearch: { prefix: true } # <-- now `superman batm` will return something!
-  }
+    errors.add(:photos, 'You can upload max 5 photos.')
+  end
+
 end
