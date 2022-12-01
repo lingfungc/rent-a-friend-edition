@@ -5,6 +5,7 @@ class Friend < ApplicationRecord
   belongs_to :user
   has_many_attached :photos                 # Attach images linked in Cloudinary
   has_many :bookings, dependent: :destroy   # Destroy bookings when friend is deleted
+  has_many :favourites, dependent: :destroy  # Destroy favourites when friend is deleted
   geocoded_by :location                     # Mapping the location attribute of friend
   after_validation :geocode, if: :will_save_change_to_location?
 
