@@ -16,27 +16,28 @@
     <div class="cards" data-controller="friends-photos-slideshow">
       <% @friends.each do |f| %>
 
-        <%= link_to friend_path(f) do %>
-          <div class="card-friends">
+        <div class="card-friends" data-photo-slideshow>
 
-            <div class="photos-btn">
-              <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
-              <button class="photos-button next" data-photo-button="next"><i class="fa-solid fa-angle-right"></i></button>
-            </div>
+          <div class="photos-btn">
+            <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button class="photos-button next" data-photo-button="next"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+
+          <%= link_to friend_path(f) do %>
 
             <% if f.photos.attached? %>
               <div class="friend-pic">
-                <ul>
+                <div data-photo-slides>
                   <% f.photos.each_with_index do |photo, i| %>
                     <% if i == 0 %>
-                      <li class="p-slide" data-active>
+                      <div class="p-slide" data-active>
                     <% else %>
-                      <li class="p-slide">
+                      <div class="p-slide">
                     <% end %>
                       <%= cl_image_tag photo.key %>
-                    </li>
+                    </div>
                   <% end %>
-                </ul>
+                </div>
               </div>
             <% end %>
 
@@ -58,9 +59,9 @@
 
             <div class="friend-price"><i class="fa-solid fa-sterling-sign"></i><strong><%= f.daily_rate.round(1) %></strong> per day</div>
 
-          </div>
+          <% end %>
 
-        <% end %>
+        </div>
 
       <% end %>
     </div>
