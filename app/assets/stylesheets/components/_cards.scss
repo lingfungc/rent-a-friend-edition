@@ -75,6 +75,7 @@ $font-c: 'Nunito', sans-serif;
   height: 400px;
   overflow: hidden;
   padding: 0.25rem;
+  margin-top: -38px;
   margin-bottom: 0.5rem;
   font-family: $font-c;
   font-size: 1rem;
@@ -136,5 +137,41 @@ $font-c: 'Nunito', sans-serif;
 
   &:hover {
     filter: brightness(110%);
+  }
+
+  .photos-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 95%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .photos-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0.6;
+    z-index: 2;
+    transition: 0.3s ease;
+  }
+  .photos-button:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+  }
+  .photos-button.prev {
+    left: 1rem;
+  }
+  .photos-button.next {
+    right: 1rem;
   }
 }

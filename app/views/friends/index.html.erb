@@ -19,6 +19,11 @@
         <%= link_to friend_path(f) do %>
           <div class="card-friends">
 
+            <div class="photos-btn">
+              <button class="photos-button prev" data-photos-button="prev">&#10094;</button>
+              <button class="photos-button next" data-photos-button="next">&#10095;</button>
+            </div>
+
             <% if f.photos.attached? %>
               <div class="friend-pic">
                 <% f.photos.each do |photo| %>
