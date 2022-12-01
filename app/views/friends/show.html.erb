@@ -66,7 +66,11 @@
     <div class="friend-rate-card">
       <div class="friend-rating">
         <!-- Friend's rating is not yet created !-->
-        <p><%= '⭐️' * @friend.rating %></p>
+        <% if @friend.rating.nil? %>
+          <div class="friend-star"><i class="fa-regular fa-star"></i></div>
+        <% else %>
+          <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
+        <% end %>
       </div>
 
       <div class="friend-reviews">
