@@ -17,10 +17,20 @@ export default class extends Controller {
         const slides = btn.closest("[data-photo-slideshow]").querySelector("[data-photo-slides]");
         // console.log(slides);
         const activeSlide = slides.querySelector("[data-active]");
-        console.log(activeSlide);
+        // console.log(activeSlide);
         let newIndex = [...slides.children].indexOf(activeSlide) + offset;
-        console.log(newIndex);
+        // console.log(newIndex);
+        if (newIndex < 0) newIndex = slides.children.length - 1;
+        if (newIndex >= slides.children.length) newIndex = 0;
 
+        // slides.children[newIndex].dataset.active = true;
+        // delete activeSlide.dataset.active;
+
+        if (offset === 1) {
+          slides.children[newIndex].classList.add("position-left");
+          activeSlide.classList.add("slide-right");
+          slides.children[newIndex].classList.add("slide-right");
+        }
       })
     })
 
