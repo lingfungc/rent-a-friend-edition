@@ -20,15 +20,23 @@
           <div class="card-friends">
 
             <div class="photos-btn">
-              <button class="photos-button prev" data-photos-button="prev"><i class="fa-solid fa-angle-left"></i></button>
-              <button class="photos-button next" data-photos-button="next"><i class="fa-solid fa-angle-right"></i></button>
+              <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
+              <button class="photos-button next" data-photo-button="next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
 
             <% if f.photos.attached? %>
               <div class="friend-pic">
-                <% f.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key %>
-                <% end %>
+                <ul>
+                  <% f.photos.each_with_index do |photo, i| %>
+                    <% if i == 0 %>
+                      <li class="p-slide" data-active>
+                    <% else %>
+                      <li class="p-slide">
+                    <% end %>
+                      <%= cl_image_tag photo.key %>
+                    </li>
+                  <% end %>
+                </ul>
               </div>
             <% end %>
 
