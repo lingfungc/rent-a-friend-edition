@@ -18,6 +18,43 @@
 
         <div class="card-friends" data-photo-slideshow>
 
+
+          <div class="fav-container">
+
+            <% if user_signed_in? %>
+
+              <% if current_user.favourites.where(friend_id:f).exists? %>
+
+                <%= simple_form_for [@friend, @favourite] do |x| %>
+
+                  <%= button_tag(type: 'submit', class: 'btn') do %>
+                    <div class="">
+                      <i class="fa-solid fa-heart dish-fa-heart"></i>
+                    </div>
+                  <% end %>
+
+                <% end %>
+
+              <% else %>
+
+                <%= form_with url:"/friends/#{f.id}/favourite", method: :create do |x| %>
+
+                   <%= x.submit "Add favourite" %>
+
+                <% end %>
+
+
+              <% end %>
+
+
+            <% else %>
+
+
+            <% end %>
+
+          </div>
+
+
           <% if f.photos.count > 1 %>
             <div class="photos-btn btn-opacity" data-action="mouseout->friends-photos-slideshow#hideBtn mouseover->friends-photos-slideshow#showBtn" data-friends-photos-slideshow-target="btn">
               <button class="photos-button prev" data-photo-button="prev"><i class="fa-solid fa-angle-left"></i></button>
