@@ -10,9 +10,13 @@ Rails.application.routes.draw do
 
   resources :friends, only: %i[index show new create] do
     get 'friends/:id/confirm', to: 'bookings#confirm', as: :confirm
-    resources :bookings, only: %i[new create]
+
+    # bookings new is not needed because the form is in friend show page
+    resources :bookings, only: %i[create]
+
+    # wont allow user to delete favourite but can change "liked" column in table
+    resources :favourite, only: %i[create edit]
   end
   resources :users, only: [:show]
   resources :bookings, only: [:destroy]
-
 end
