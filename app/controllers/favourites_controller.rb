@@ -1,10 +1,14 @@
 class FavouritesController < ApplicationController
+  def index
+    @favourites = current_user.favourites
+  end
 
   def create
     @favourite = Favourite.new
     @favourite.user = current_user
     @favourite.friend = Friend.find(params[:friend_id])
     @favourite.liked = true
+    raise
     flash[:notice] = 'Added to favourite' if @favourite.save
   end
 

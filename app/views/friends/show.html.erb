@@ -20,6 +20,18 @@
     </div>
   </div>
 
+
+  <%= simple_form_for [@friend, @favourite] do |x| %>
+
+  <%= button_tag(type: 'submit', class: 'btn') do %>
+    <div class="">
+      <i class="fa-solid fa-heart dish-fa-heart"></i>
+    </div>
+  <% end %>
+
+<% end %>
+
+
   <hr>
 
   <div class="friend-card-bottom">

@@ -15,8 +15,9 @@ Rails.application.routes.draw do
     resources :bookings, only: %i[create]
 
     # wont allow user to delete favourite but can change "liked" column in table
-    resources :favourite, only: %i[create edit]
+    resources :favourites, only: %i[create edit]
   end
   resources :users, only: [:show]
   resources :bookings, only: [:destroy]
+  resources :favourites, only: %i[index destroy]
 end
