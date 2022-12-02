@@ -8,10 +8,23 @@ class FavouritesController < ApplicationController
     flash[:notice] = 'Added to favourite' if @favourite.save
   end
 
+  def edit
+    @favourite = Favourite.find(params[:id])
+    if @favourite.liked == false
+      @favourite.liked = true
+      @favourite.save
+      flash[:notice] = 'Added to favourite'
+    else
+      @favourite.liked = false
+      @favourite.save
+      flash[:notice] = 'Removed from favourite'
+    end
+  end
+
   private
 
   # Not necessary for favourite because there is any params input by user
   def favourite_params
-    params.require(:favourite).permit(:user_id, :friend_id)
+    params.require(:favourite).permit(:liked)
   end
 end
