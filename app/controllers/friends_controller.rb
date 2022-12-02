@@ -37,6 +37,7 @@ class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
     @booking = Booking.new
+    @favourite = Favourite.new
   end
 
   def new
