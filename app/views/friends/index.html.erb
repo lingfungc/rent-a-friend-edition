@@ -38,7 +38,9 @@
               <% else %>
 
                 <%= form_with url:"/friends/#{f.id}/favourites", method: :create do |x| %>
-                   <%= x.submit "Add favourite" %>
+                   <%= x.submit do %>
+                    <i class="fa-solid fa-heart dish-fa-heart"></i>
+                  <% end %>
                 <% end %>
 
 
