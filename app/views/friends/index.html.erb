@@ -30,11 +30,12 @@
               <% else %>
 
                 <%= form_with url:"/friends/#{f.id}/favourites", method: :create do |x| %>
-                  <%= button_tag(type: 'submit', class: 'btn') do %>
-                    <div class="">
-                      <i class="fa-solid fa-heart dish-fa-heart"></i>
+                  <%# class 'btn' is a bootstrap css class %>
+                    <div class="fav-icons">
+                      <%= button_tag(type: 'submit', class: 'btn') do %>
+                        <i class="fa-solid fa-heart fd-fa-heart fa-grey"></i>
+                      <% end %>
                     </div>
-                  <% end %>
                 <% end %>
 
 
