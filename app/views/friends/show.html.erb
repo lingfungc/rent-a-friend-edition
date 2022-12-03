@@ -4,14 +4,22 @@
 
   <div class="friend-main-info">
     <h3><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h3>
-    <%= @friend.pronouns.titleize %>
 
-      <% if @friend.rating.nil? %>
-        <div class="friend-star"><i class="fa-regular fa-star"></i> New</div>
-      <% else %>
-        <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
-      <% end %>
-      <%= @friend.location %>
+    <div class="friend-sub-info">
+      <div class="friend-sub-left">
+        <%= @friend.pronouns.titleize %>
+        <% if @friend.rating.nil? %>
+          <div class="friend-star"><i class="fa-regular fa-star"></i> New</div>
+        <% else %>
+          <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
+        <% end %>
+        <%= @friend.location %>
+      </div>
+      <div class="friend-sub-left">
+        Share
+        Like
+      </div>
+    </div>
 
   </div>
 
