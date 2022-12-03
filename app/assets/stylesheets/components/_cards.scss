@@ -97,15 +97,15 @@ $photo-size: 280px;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(180, 180, 180, 0.8);
+      background: rgba(180, 180, 180, 0.75);
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      transition: 0.3s all;
+      transition: 0.3s all ease-in-out;
 
-      &:hover {
-        background: rgba(200, 200, 200, 0.8);
-      }
+      // &:hover {
+      //   background: rgba(200, 200, 200, 0.75);
+      // }
 
       .btn {
         border-width: 0;
@@ -120,13 +120,26 @@ $photo-size: 280px;
         border-radius: 50%;
         padding: 0;
       }
-      .fa-grey {
-        color: rgb(80, 80, 80);
+
+      .fa-red {
+        color: crimson;
+        transition: 0.3s all ease-in-out;
 
         &:hover {
-          color: rgb(60, 60, 60);
+          color: rgb(220, 20, 60);
+          filter: brightness(40%);
         }
       }
+
+      .fa-grey {
+        color: rgb(80, 80, 80);
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          color: rgb(220, 20, 60);
+        }
+      }
+
       .fd-fa-heart {
         font-size: 1.25rem;
       }

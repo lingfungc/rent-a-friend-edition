@@ -5,7 +5,7 @@
   <h3>Confirm and pay</h3>
 
   <div class="card-booking">
-    <%= cl_image_tag @booking.friend.photo.key, class: 'cl_img' %>
+    <%= cl_image_tag @booking.friend.photos.first.key, class: 'cl_img' %>
 
     <div class="card-booking-infos">
       <p>Friend: <%= @booking.friend.first_name %> <%= @booking.friend.last_name %> </p>
