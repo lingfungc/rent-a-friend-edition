@@ -18,17 +18,14 @@
 
         <div class="card-friends" data-photo-slideshow>
 
-
           <div class="fav-container">
 
             <% if user_signed_in? %>
 
               <% if current_user.favourites.where(friend_id:f).exists? %>
-
               <% fav = current_user.favourites.where(friend_id:f).first %>
 
                 <% if fav.liked %>
-
                   <%= form_with url:"/friends/#{f.id}/favourites/#{fav.id}", method: :put do |x| %>
                     <%# class 'btn' is a bootstrap css class %>
                     <div class="fav-icons">
@@ -39,7 +36,6 @@
                   <% end %>
 
                 <% else %>
-
                   <%= form_with url:"/friends/#{f.id}/favourites/#{fav.id}", method: :put do |x| %>
                     <%# class 'btn' is a bootstrap css class %>
                     <div class="fav-icons">
@@ -48,12 +44,9 @@
                       <% end %>
                     </div>
                   <% end %>
-
                 <% end %>
 
-
               <% else %>
-
                 <%= form_with url:"/friends/#{f.id}/favourites", method: :create do |x| %>
                   <%# class 'btn' is a bootstrap css class %>
                   <div class="fav-icons">
@@ -62,21 +55,17 @@
                     <% end %>
                   </div>
                 <% end %>
-
               <% end %>
 
             <% else %>
-
               <div class="fav-icons">
                 <%= link_to new_user_session_path do %>
                   <i class="fa-solid fa-heart fd-fa-heart fa-grey"></i>
                 <% end %>
               </div>
-
             <% end %>
 
           </div>
-
 
           <% if f.photos.count > 1 %>
             <div class="photos-btn btn-opacity" data-action="mouseout->friends-photos-slideshow#hideBtn mouseover->friends-photos-slideshow#showBtn" data-friends-photos-slideshow-target="btn">
