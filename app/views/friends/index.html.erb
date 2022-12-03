@@ -79,7 +79,7 @@
             </div>
           <% end %>
 
-          <%= link_to friend_path(f) do %>
+          <%= link_to friend_path(f), target: :_blank do %>
 
             <% if f.photos.attached? %>
               <div class="friend-pic" data-action="mouseout->friends-photos-slideshow#hideBtn mouseover->friends-photos-slideshow#showBtn">
