@@ -11,7 +11,7 @@ class FavouritesController < ApplicationController
     flash[:notice] = 'Added to favourite' if @favourite.save
   end
 
-  def edit
+  def update
     @favourite = Favourite.find(params[:id])
     if @favourite.liked == false
       @favourite.liked = true
