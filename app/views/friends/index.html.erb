@@ -25,21 +25,15 @@
 
               <% if current_user.favourites.where(friend_id:f).exists? %>
 
-                <%= simple_form_for [@friend, @favourite] do |x| %>
 
-                  <%= button_tag(type: 'submit', class: 'btn') do %>
-                    <div class="">
-                      <i class="fa-solid fa-heart dish-fa-heart"></i>
-                    </div>
-                  <% end %>
-
-                <% end %>
 
               <% else %>
 
                 <%= form_with url:"/friends/#{f.id}/favourites", method: :create do |x| %>
-                   <%= x.submit do %>
-                    <i class="fa-solid fa-heart dish-fa-heart"></i>
+                  <%= button_tag(type: 'submit', class: 'btn') do %>
+                    <div class="">
+                      <i class="fa-solid fa-heart dish-fa-heart"></i>
+                    </div>
                   <% end %>
                 <% end %>
 
