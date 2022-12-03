@@ -117,7 +117,7 @@
 
             </div>
 
-            <div class="friend-price"><i class="fa-solid fa-sterling-sign"></i><strong><%= f.daily_rate.round(1) %></strong> per day</div>
+            <div class="friend-price"><i class="fa-solid fa-sterling-sign"></i><strong><%= number_with_delimiter(f.daily_rate.round(1), delimiter: ',') %></strong> per day</div>
 
           <% end %>
 
