@@ -1,135 +1,140 @@
-<div class="space">
+<div class="body-space">
 
-<div class="container">
+  <div class="show-container">
 
- <div class="friend-card-top">
-    <div class="friend-img">
-      <% @friend.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, class: 'cl_img'  %>
-      <% end %>
-    </div>
+  <div class="friend-main-info">
+    <h3><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h3>
 
-    <div class="friend-info">
-      <h4><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h4>
-      <p><b>Pronouns:</b> <%= @friend.pronouns.titleize %></p>
-      <p><b>Categories:</b> <%= @friend.categories.titleize %></p>
-      <p><b>Location:</b> <%= @friend.location %></p>
-      <div class="friend-bio">
-      <p><b>Bio:</b> <%= @friend.bio %></p>
-      </div>
-    </div>
   </div>
 
-
-  <%= simple_form_for [@friend, @favourite] do |x| %>
-
-  <%= button_tag(type: 'submit', class: 'btn') do %>
-    <div class="">
-      <i class="fa-solid fa-heart dish-fa-heart"></i>
-    </div>
-  <% end %>
-
-<% end %>
-
-
-  <hr>
-
-  <div class="friend-card-bottom">
-    <div class="friend-form">
-      <div class="bg-white rounded p-3 shadow">
-
-        <h6>£<%= @friend.daily_rate.round(2) %> <em>day</em></h6>
-
-        <div class="row">
-
-          <div class="col">
-            <div data-controller="day-counter" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
-            <%# data-action="change->day-counter#counter" %>
-              <%# simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
-                  <%# f.input :start_date, as: :date, html5: true %>
-                  <%# f.input :end_date, as: :date, html5: true %>
-                  <%# f.submit "Reserve", class: "btn btn-flat" %>
-              <%# end %>
-            </div>
-          </div>
-
-          <div class="widget-content" data-unavailable="<%= @friend.unavailable_dates.to_json %>"></div>
-
-          <div class="col">
-            <div data-controller="day-counter flatpickr" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
-              <%= simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
-                <%= f.input :start_date, as: :string, label: "Starts From", placeholder: "From" %>
-                <%= f.input :end_date, as: :string, label: 'Ends On'.html_safe, placeholder: "To", disabled: true %>
-                <%= f.submit "Reserve", class: "btn btn-flat" %>
-              <% end %>
-              <%# <input class="flatpickr flatpickr-input" id="myID" type="text" placeholder="Select Date..."> %>
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- Total price to be updated and need to work with the booking form !-->
-          <h6 id="total-price">Total price: <strong>£0</strong></h6>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="friend-rate-card">
-      <div class="friend-rating">
-        <!-- Friend's rating is not yet created !-->
-        <% if @friend.rating.nil? %>
-          <div class="friend-star"><i class="fa-regular fa-star"></i></div>
-        <% else %>
-          <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
+  <div class="friend-card-top">
+      <div class="friend-img">
+        <% @friend.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, class: 'cl_img'  %>
         <% end %>
       </div>
 
-      <div class="friend-reviews">
-
-        <div class="card-review">
-            <!-- User' image is not yet created !-->
-            <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
-            <div class="card-review-infos">
-              <!-- Review and rating are not yet created !-->
-              <h2>Dave</h2>
-              <p>Was ok.</p>
-            </div>
+      <div class="friend-info">
+        <h4><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h4>
+        <p><b>Pronouns:</b> <%= @friend.pronouns.titleize %></p>
+        <p><b>Categories:</b> <%= @friend.categories.titleize %></p>
+        <p><b>Location:</b> <%= @friend.location %></p>
+        <div class="friend-bio">
+        <p><b>Bio:</b> <%= @friend.bio %></p>
         </div>
-
-          <div class="card-review">
-            <!-- User' image is not yet created !-->
-            <img src="https://images.unsplash.com/photo-1521806463-65fbb1ab7ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
-            <div class="card-review-infos">
-              <!-- Review and rating are not yet created !-->
-              <h2>Geoff</h2>
-              <p>Was ok</p>
-            </div>
-          </div>
-
-          <div class="card-review">
-            <!-- User' image is not yet created !-->
-            <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
-            <div class="card-review-infos">
-              <!-- Review and rating are not yet created !-->
-              <h2>Stella</h2>
-            <p>Will rent again</p>
-            </div>
-          </div>
-
-          <div class="card-review">
-            <!-- User' image is not yet created !-->
-            <img src="https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
-            <div class="card-review-infos">
-              <!-- Review and rating are not yet created !-->
-              <h2>Charles</h2>
-              <p>Ruff, Ruff!</p>
-            </div>
-          </div>
-
       </div>
     </div>
-  </div>
 
-</div>
+
+    <%= simple_form_for [@friend, @favourite] do |x| %>
+
+    <%= button_tag(type: 'submit', class: 'btn') do %>
+      <div class="">
+        <i class="fa-solid fa-heart dish-fa-heart"></i>
+      </div>
+    <% end %>
+
+  <% end %>
+
+
+    <hr>
+
+    <div class="friend-card-bottom">
+      <div class="friend-form">
+        <div class="bg-white rounded p-3 shadow">
+
+          <h6>£<%= @friend.daily_rate.round(2) %> <em>day</em></h6>
+
+          <div class="row">
+
+            <div class="col">
+              <div data-controller="day-counter" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
+              <%# data-action="change->day-counter#counter" %>
+                <%# simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
+                    <%# f.input :start_date, as: :date, html5: true %>
+                    <%# f.input :end_date, as: :date, html5: true %>
+                    <%# f.submit "Reserve", class: "btn btn-flat" %>
+                <%# end %>
+              </div>
+            </div>
+
+            <div class="widget-content" data-unavailable="<%= @friend.unavailable_dates.to_json %>"></div>
+
+            <div class="col">
+              <div data-controller="day-counter flatpickr" data-day-counter-position-value="<%= @friend.daily_rate.round(2) %>">
+                <%= simple_form_for [@friend, @booking], data: {day_counter_target: "form"}, url: friend_confirm_path(@friend), method: :get do |f| %>
+                  <%= f.input :start_date, as: :string, label: "Starts From", placeholder: "From" %>
+                  <%= f.input :end_date, as: :string, label: 'Ends On'.html_safe, placeholder: "To", disabled: true %>
+                  <%= f.submit "Reserve", class: "btn btn-flat" %>
+                <% end %>
+                <%# <input class="flatpickr flatpickr-input" id="myID" type="text" placeholder="Select Date..."> %>
+              </div>
+            </div>
+
+            <hr>
+
+            <!-- Total price to be updated and need to work with the booking form !-->
+            <h6 id="total-price">Total price: <strong>£0</strong></h6>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="friend-rate-card">
+        <div class="friend-rating">
+          <!-- Friend's rating is not yet created !-->
+          <% if @friend.rating.nil? %>
+            <div class="friend-star"><i class="fa-regular fa-star"></i></div>
+          <% else %>
+            <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
+          <% end %>
+        </div>
+
+        <div class="friend-reviews">
+
+          <div class="card-review">
+              <!-- User' image is not yet created !-->
+              <img src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
+              <div class="card-review-infos">
+                <!-- Review and rating are not yet created !-->
+                <h2>Dave</h2>
+                <p>Was ok.</p>
+              </div>
+          </div>
+
+            <div class="card-review">
+              <!-- User' image is not yet created !-->
+              <img src="https://images.unsplash.com/photo-1521806463-65fbb1ab7ff9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
+              <div class="card-review-infos">
+                <!-- Review and rating are not yet created !-->
+                <h2>Geoff</h2>
+                <p>Was ok</p>
+              </div>
+            </div>
+
+            <div class="card-review">
+              <!-- User' image is not yet created !-->
+              <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
+              <div class="card-review-infos">
+                <!-- Review and rating are not yet created !-->
+                <h2>Stella</h2>
+              <p>Will rent again</p>
+              </div>
+            </div>
+
+            <div class="card-review">
+              <!-- User' image is not yet created !-->
+              <img src="https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" />
+              <div class="card-review-infos">
+                <!-- Review and rating are not yet created !-->
+                <h2>Charles</h2>
+                <p>Ruff, Ruff!</p>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
 </div>
