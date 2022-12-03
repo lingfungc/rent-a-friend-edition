@@ -228,13 +228,25 @@ $photo-size: 280px;
     }
 
     .card-friend-info-r {
+      font-size: 0.9rem;
       display: flex;
       align-items: center;
       height: 1.25rem;
 
       .friend-star {
-        font-size: 0.75rem;
         margin-right: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fa-solid {
+          font-size: 0.75rem;
+        }
+
+        .fa-regular {
+          font-size: 0.75rem;
+          margin-right: 0.25rem;
+        }
       }
     }
   }

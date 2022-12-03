@@ -100,7 +100,7 @@
 
               <div class="card-friend-info-r">
                 <% if f.rating.nil? %>
-                  <div class="friend-star"><i class="fa-regular fa-star"></i></div>
+                  <div class="friend-star"><i class="fa-regular fa-star"></i> New</div>
                 <% else %>
                   <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= f.rating.round(1) %></strong>
                 <% end %>
