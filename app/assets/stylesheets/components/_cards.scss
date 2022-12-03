@@ -87,7 +87,7 @@ $color-t: #92B4EC;
   .fav-container {
     position: relative;
     top: 17.5%;
-    margin-right: 1rem;
+    margin-right: 0.75rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -214,7 +214,7 @@ $color-t: #92B4EC;
     width: 95%;
     height: 2rem;
     position: relative;
-    top: 42.5%;
+    top: 40%;
     transform: translateY(-50%);
     z-index: 3;
 
@@ -235,7 +235,7 @@ $color-t: #92B4EC;
     // transform: translateY(-50%);
     background: none;
     border: none;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(200, 200, 200, 0.9);
     border-radius: 50px;
     box-shadow: $btn-shadow;
     margin: 0 0.2rem;
@@ -260,7 +260,7 @@ $color-t: #92B4EC;
     font-size: 1rem;
     color: rgba(0, 0, 0, 0.6);
     box-shadow: $btn-shadow-h;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(200, 200, 200, 1);
   }
   .photos-button.next {
     right: 1rem;
@@ -269,7 +269,7 @@ $color-t: #92B4EC;
     font-size: 1rem;
     color: rgba(0, 0, 0, 0.6);
     box-shadow: $btn-shadow-h;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(200, 200, 200, 1);
   }
 
   .card-friend-single {
