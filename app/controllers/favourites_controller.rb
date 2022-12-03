@@ -8,20 +8,17 @@ class FavouritesController < ApplicationController
     @favourite.user = current_user
     @favourite.friend = Friend.find(params[:friend_id])
     @favourite.liked = true
-    flash[:notice] = 'Added to favourite' if @favourite.save
+    redirect_to friends_path if @favourite.save
   end
 
   def update
     @favourite = Favourite.find(params[:id])
     if @favourite.liked == false
       @favourite.liked = true
-      @favourite.save
-      flash[:notice] = 'Added to favourite'
     else
       @favourite.liked = false
-      @favourite.save
-      flash[:notice] = 'Removed from favourite'
     end
+    redirect_to friends_path if @favourite.save
   end
 
   private
