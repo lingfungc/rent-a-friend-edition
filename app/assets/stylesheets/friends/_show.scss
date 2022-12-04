@@ -55,95 +55,153 @@ $font-t: 'Outfit', sans-serif;
   }
 }
 
+.fav-container {
 
+  .fav-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(140, 140, 140, 0.75);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: 0.3s all ease-in-out;
 
+    // &:hover {
+    //   background: rgba(200, 200, 200, 0.75);
+    // }
 
-.container {
-  margin: 0 auto;
-  margin-top: 20px;
-  width: 100%;
+    .btn {
+      border-width: 0;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 0;
+    }
+
+    .fa-blue {
+      color: $color-t;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        color: $color-t;
+        filter: brightness(40%);
+      }
+    }
+
+    .fa-grey {
+      color: rgb(80, 80, 80);
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        color: $color-t;
+      }
+    }
+
+    .fd-fa-heart {
+      font-size: 1.1rem;
+    }
+  }
 }
 
-.friend-card-top {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-}
 
-.friend-img .cl_img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
 
-.friend-card-top .friend-info {
-  padding: 16px;
-}
 
-.friend-bio {
-  word-wrap: break-word;
-  width: 850px;
-}
 
-.friend-card-bottom {
-  display: flex;
-  // align-items: center;
-  margin-top: 25px;
-  justify-content: space-between;
-}
 
-.friend-card-bottom .friend-rate-card {
-  padding: 16px;
-}
 
-.friend-form{
-  width: 250px;
-}
+// .container {
+//   margin: 0 auto;
+//   margin-top: 20px;
+//   width: 100%;
+// }
 
-.friend-form h6{
-  width: 250px;
-  font-family: 'Bona Nova', serif;
-}
+// .friend-card-top {
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 25px;
+// }
 
-.col {
-  padding-bottom: 10px;
-}
+// .friend-img .cl_img {
+//   width: 250px;
+//   height: 250px;
+//   object-fit: cover;
+// }
 
-.btn-primary {
-  width: 100%;
-  margin-right: 10px;
-}
+// .friend-card-top .friend-info {
+//   padding: 16px;
+// }
 
-.card-review {
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  width: 1000px;
-}
+// .friend-bio {
+//   word-wrap: break-word;
+//   width: 850px;
+// }
 
-.card-review img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
+// .friend-card-bottom {
+//   display: flex;
+//   // align-items: center;
+//   margin-top: 25px;
+//   justify-content: space-between;
+// }
 
-.card-review h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+// .friend-card-bottom .friend-rate-card {
+//   padding: 16px;
+// }
 
-.card-review p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
+// .friend-form{
+//   width: 250px;
+// }
 
-.card-review .card-review-infos {
-  padding: 16px;
-}
+// .friend-form h6{
+//   width: 250px;
+//   font-family: 'Bona Nova', serif;
+// }
+
+// .col {
+//   padding-bottom: 10px;
+// }
+
+// .btn-primary {
+//   width: 100%;
+//   margin-right: 10px;
+// }
+
+// .card-review {
+//   height: 120px;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   display: flex;
+//   align-items: center;
+//   margin-bottom: 15px;
+//   width: 1000px;
+// }
+
+// .card-review img {
+//   height: 100%;
+//   width: 120px;
+//   object-fit: cover;
+// }
+
+// .card-review h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-review p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card-review .card-review-infos {
+//   padding: 16px;
+// }
