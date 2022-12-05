@@ -55,67 +55,84 @@ $font-t: 'Outfit', sans-serif;
   }
 }
 
-.fav-container {
 
-  a {
-    text-decoration: none;
-    color: black;
-  }
+.friend-sub-right {
 
-  .btn {
-    border-width: 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    padding: 0;
-  }
-
-  .fav-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 30px;
-    // height: 30px;
-    padding: 0.75rem 1rem;
-    border-radius: 20px;
-    transition: 0.5s all ease-in-out;
-
-    &:hover {
-      background: rgba(240, 240, 240, 1);
-      color: $color-t;
-      // filter: brightness(40%);
-    }
-  }
-
-  .fav-icons-liked {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // width: 30px;
-    // height: 30px;
-    padding: 0.75rem 1rem;
-    border-radius: 20px;
-    color: $color-t;
-    transition: 0.5s all ease-in-out;
-
-    &:hover {
-      background: rgba(240, 240, 240, 1);
-      color: black;
-      // filter: brightness(40%);
-    }
-  }
-
-  .fd-fa-heart {
-    font-size: 1.1rem;
+  span {
     margin-right: 0.25rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: 0.5s all ease-in-out;
+
+    &:hover {
+      background: rgba(230, 230, 230, 1);
+      color: $color-t;
+    }
+  }
+
+  .fav-container {
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .btn {
+      border-width: 0;
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 0;
+    }
+
+    .fav-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: 0.5s all ease-in-out;
+
+      &:hover {
+        background: rgba(230, 230, 230, 1);
+        color: $color-t;
+      }
+    }
+
+    .fav-icons-liked {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-radius: 20px;
+      color: $color-t;
+      transition: 0.5s all ease-in-out;
+
+      &:hover {
+        background: rgba(230, 230, 230, 1);
+        color: black;
+      }
+    }
+
+    .fd-fa-heart {
+      font-size: 1.1rem;
+      margin-right: 0.25rem;
+    }
   }
 }
+
+
+
 
 .friend-card-top {
   margin-top: 2rem;
