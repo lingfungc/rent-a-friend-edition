@@ -30,41 +30,41 @@
               <% if fav.liked %>
                 <%= form_with url:"/friends/#{@friend.id}/favourites/#{fav.id}", method: :put do |x| %>
                   <%# class 'btn' is a bootstrap css class %>
-                  <div class="fav-icons">
-                    <%= button_tag(type: 'submit', class: 'btn') do %>
-                      <i class="fa-solid fa-heart fd-fa-heart fa-blue"></i>Like
-                    <% end %>
-                  </div>
+                  <%= button_tag(type: 'submit', class: 'btn') do %>
+                    <div class="fav-icons-liked">
+                      <i class="fa-solid fa-heart fd-fa-heart fa-blue"></i>Liked
+                    </div>
+                  <% end %>
                 <% end %>
 
               <% else %>
                 <%= form_with url:"/friends/#{@friend.id}/favourites/#{fav.id}", method: :put do |x| %>
                   <%# class 'btn' is a bootstrap css class %>
-                  <div class="fav-icons">
-                    <%= button_tag(type: 'submit', class: 'btn') do %>
+                  <%= button_tag(type: 'submit', class: 'btn') do %>
+                    <div class="fav-icons">
                       <i class="fa-solid fa-heart fd-fa-heart fa-grey"></i>Like
-                    <% end %>
-                  </div>
+                    </div>
+                  <% end %>
                 <% end %>
               <% end %>
 
             <% else %>
               <%= form_with url:"/friends/#{@friend.id}/favourites", method: :create do |x| %>
                 <%# class 'btn' is a bootstrap css class %>
-                <div class="fav-icons">
-                  <%= button_tag(type: 'submit', class: 'btn') do %>
+                <%= button_tag(type: 'submit', class: 'btn') do %>
+                  <div class="fav-icons">
                     <i class="fa-solid fa-heart fd-fa-heart fa-grey"></i>Like
-                  <% end %>
-                </div>
+                  </div>
+                <% end %>
               <% end %>
             <% end %>
 
           <% else %>
-            <div class="fav-icons">
-              <%= link_to new_user_session_path do %>
+            <%= link_to new_user_session_path do %>
+              <div class="fav-icons">
                 <i class="fa-solid fa-heart fd-fa-heart fa-grey"></i>Like
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           <% end %>
 
         </div>
