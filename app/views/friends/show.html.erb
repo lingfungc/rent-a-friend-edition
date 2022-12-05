@@ -6,6 +6,7 @@
     <h3><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h3>
 
     <div class="friend-sub-info">
+
       <div class="friend-sub-left">
         <span><%= @friend.pronouns.titleize %></span><span>•</span>
         <span>
@@ -21,12 +22,10 @@
       <div class="friend-sub-right">
         <span><i class="fa-solid fa-arrow-up-from-bracket"></i>Share</span>
 
-          <div class="fav-container">
-
+        <div class="fav-container">
           <% if user_signed_in? %>
-
             <% if current_user.favourites.where(friend_id: @friend).exists? %>
-            <% fav = current_user.favourites.where(friend_id: @friend).first %>
+              <% fav = current_user.favourites.where(friend_id: @friend).first %>
 
               <% if fav.liked %>
                 <%= form_with url:"/friends/#{@friend.id}/favourites/#{fav.id}", method: :put do |x| %>
@@ -37,7 +36,6 @@
                     </div>
                   <% end %>
                 <% end %>
-
               <% else %>
                 <%= form_with url:"/friends/#{@friend.id}/favourites/#{fav.id}", method: :put do |x| %>
                   <%# class 'btn' is a bootstrap css class %>
@@ -67,7 +65,6 @@
               </div>
             <% end %>
           <% end %>
-
         </div>
 
       </div>
