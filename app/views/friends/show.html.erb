@@ -125,6 +125,12 @@
 
                 <button class="carousel_button"<i class="fa-solid fa-angle-right"></i></button>
 
+                <div class="carousel_nav">
+                  <% @friend.photos.count.times do %>
+                    <button class="carousel_indicator"></button>
+                  <% end %>
+                </div>
+
               </div>
 
             </div>
