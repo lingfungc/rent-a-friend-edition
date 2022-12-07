@@ -1,21 +1,21 @@
 <div class="space">
 
-<h1 class="new-title">Become a Friend</h1>
+  <h1 class="new-title">Become a Friend</h1>
 
-<div class="container">
-  <%= simple_form_for(@friend) do |x| %>
-  <%= x.input :first_name, label: "First Name:" %>
-  <%= x.input :last_name, label: "Last Name:" %>
-  <%= x.input :age, collection: 18..100 %>
-  <%= x.input :location, label: "Hometown:" %>
-  <%= x.input :pronouns, collection: @pronouns, label: "Preferred Pronouns:" %>
-  <%= x.input :categories, collection: @categories, include_hidden: false, label: "Friend Preferrence" %>
-  <%= x.input :bio, placeholder: "Write a little bit about yourself ..." %>
-  <%= x.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= x.input :daily_rate, label: "How much do you want to charge per day?", as: :float , placeholder: "£" %>
-  <%= x.submit "Submit 😎" %>
-  <% end %>
-</div>
+  <div class="container">
+    <%= simple_form_for(@friend) do |x| %>
+    <%= x.input :first_name, label: "First Name:" %>
+    <%= x.input :last_name, label: "Last Name:" %>
+    <%= x.input :age, collection: 18..100 %>
+    <%= x.input :location, label: "Hometown:" %>
+    <%= x.input :pronouns, collection: @pronouns, label: "Preferred Pronouns:" %>
+    <%= x.input :categories, collection: @categories, include_hidden: false, label: "Friend Preferrence" %>
+    <%= x.input :bio, placeholder: "Write a little bit about yourself ..." %>
+    <%= x.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= x.input :daily_rate, label: "How much do you want to charge per day?", as: :float , placeholder: "£" %>
+    <%= x.submit "Submit 😎" %>
+    <% end %>
+  </div>
 </div>
 
 <!-- Add as: :check_box to categories input/association  -->

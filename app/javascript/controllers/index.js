@@ -16,6 +16,9 @@ application.register("filter-highlight", FilterHighlightController)
 import FlatpickrController from "./flatpickr_controller"
 application.register("flatpickr", FlatpickrController)
 
+import FriendCarouselController from "./friend_carousel_controller"
+application.register("friend-carousel", FriendCarouselController)
+
 import FriendPhotosPopupController from "./friend_photos_popup_controller"
 application.register("friend-photos-popup", FriendPhotosPopupController)
 
