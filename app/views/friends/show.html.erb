@@ -73,11 +73,16 @@
   </div>
 
   <div class="friend-card-top">
+
       <div class="friend-img">
+
         <% @friend.photos.each do |photo| %>
           <%= cl_image_tag photo.key, class: 'cl_img'  %>
         <% end %>
+
       </div>
+
+      <br>
 
       <div class="friend-info">
         <h4><%= @friend.first_name.titleize %> <%= @friend.last_name.titleize %></h4>
