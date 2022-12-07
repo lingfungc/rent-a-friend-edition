@@ -22,11 +22,15 @@ $input-font-size: 1rem;
 $font-t: 'Outfit', sans-serif;
 
 
+// General Layout
+
 .show-container {
   margin: 0 auto;
   margin-top: 1rem;
   width: 75%;
 }
+
+// Friend - Headline Info
 
 .friend-main-info {
   margin-top: 4rem;
@@ -55,6 +59,7 @@ $font-t: 'Outfit', sans-serif;
   }
 }
 
+// Friend - Share and Like Btns
 
 .friend-sub-right {
 
@@ -137,6 +142,7 @@ $font-t: 'Outfit', sans-serif;
   }
 }
 
+// Friend - Photos
 
 .friend-card-top {
   width: 100%;
@@ -146,12 +152,10 @@ $font-t: 'Outfit', sans-serif;
     width: 100%;
     height: 640px;
     border-radius: 12px;
+    box-shadow: $item-shadow;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.75rem;
-    // display: flex;
-    // justify-content: space-between;
-    // align-content: center;
     overflow: hidden;
 
     .friend-img-left {
@@ -162,6 +166,12 @@ $font-t: 'Outfit', sans-serif;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          filter: brightness(90%);
+        }
       }
     }
 
@@ -181,6 +191,12 @@ $font-t: 'Outfit', sans-serif;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+
+        &:hover {
+          filter: brightness(90%);
+        }
       }
     }
   }
