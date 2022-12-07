@@ -76,9 +76,19 @@
 
       <div class="friend-img">
 
-        <% @friend.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, class: 'cl_img'  %>
-        <% end %>
+        <div class="friend-img-left">
+          <%# <div class="photo"> %>
+            <%= cl_image_tag @friend.photos.first.key %>
+          <%# </div> %>
+        </div>
+
+        <div class="friend-img-right">
+          <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
+            <div class="photo">
+              <%= cl_image_tag photo.key, class: 'cl_img'  %>
+            </div>
+          <% end %>
+        </div>
 
       </div>
 
