@@ -90,6 +90,23 @@
           <% end %>
         </div>
 
+        <div class="friend-photos-window">
+
+          <div class="friend-photos-content">
+
+            <div class="popup-close-btn">&times;</div>
+
+            <% @friend.photos.each do |photo| %>
+              <div class="photo">
+                <%= cl_image_tag photo.key, class: 'cl_img'  %>
+              </div>
+            <% end %>
+
+            </div>
+
+        </div>
+
+
       </div>
 
       <br>
