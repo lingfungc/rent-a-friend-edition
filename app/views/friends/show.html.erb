@@ -90,26 +90,48 @@
           <% end %>
         </div>
 
+
+
+      </div>
+
+      <br>
+
         <div class="friend-photos-window">
 
           <div class="friend-photos-content">
 
             <div class="popup-close-btn">&times;</div>
 
-            <% @friend.photos.each do |photo| %>
-              <div class="photo">
-                <%= cl_image_tag photo.key, class: 'cl_img'  %>
+              <div class="carousel">
+
+                <button class="carousel_button"><i class="fa-solid fa-angle-left"></i></button>
+
+                <div class="carousel_tracker-container">
+
+                  <ul class="carousel_track">
+
+                    <% @friend.photos.each do |photo| %>
+
+                      <li class="carousel_slide">
+                        <%= cl_image_tag photo.key, alt: "" %>
+                      </li>
+
+                    <% end %>
+
+
+                  </ul>
+
+                </div>
+
+                <button class="carousel_button"<i class="fa-solid fa-angle-right"></i></button>
+
               </div>
-            <% end %>
 
             </div>
 
+          </div>
+
         </div>
-
-
-      </div>
-
-      <br>
 
       <div class="friend-info">
 
