@@ -166,8 +166,8 @@ $font-t: 'Outfit', sans-serif;
         height: 100%;
         object-fit: cover;
         box-shadow: $item-shadow;
-        cursor: pointer;
-        // cursor: url("Zoom-In24."), auto;
+        // cursor: pointer;
+        cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAQAAADYBBcfAAAAqElEQVR42qWVOQ7EIAxF3wmoUqXMGTgGBR1lNCji/jdghDI7MATbv+XJu4HaFiyOQCQScFgWhrYRSA0Ftj5k8E3oKY9pYSv7X6xoZ62xY4gVHd+oueDt7fUjYH8ZO3N9VTJN6lHhdgNSzjl3wHC2O02DqYyEFYEWnAh03QwHYIBYP2/ZDxil4E0Rqrg44naIB0A8coohF6+VYpHFp0NxrBTnUXGQp76AO/soOi9I+gdeAAAAAElFTkSuQmCC"), auto;
         transition: 0.3s all ease-in-out;
 
         &:hover {
