@@ -17,23 +17,27 @@ export default class extends Controller {
     const dots = Array.from(dotsNav.children);
 
     // const slideSize = slides[0].getBoundingClientRect();
-    // console.log(slideSize);
     // const slideWidth = slideSize.width;
-    // console.log(slideWidth);
     const slideWidth = slides[0].getBoundingClientRect().width;
 
     // Arrange the slides next to one aonther
     const setSlidePosition = (slide, index) => {
       slide.style.left = slideWidth * index + 'px';
     };
-
     slides.forEach(setSlidePosition);
 
-
-
-
     // When click left, move slide to left
+
     // When click right, move slide to right
+    nextBtn.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide');
+      const nextSlide = currentSlide.nextElementSibling;
+      const amountToMove = nextSlide.style.left;
+
+      track.style.transform = 'translateX(' + amountToMove + ')';
+    });
+
     // When click the nav indicators, move to that slide
+
   }
 }
