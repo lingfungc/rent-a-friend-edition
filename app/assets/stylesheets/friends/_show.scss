@@ -292,6 +292,10 @@ $font-t: 'Outfit', sans-serif;
   .carousel_indicator.current-slide {
     background: rgba(0,0,0,0.6);
   }
+
+  .is-hidden {
+    display: none;
+  }
 }
 
 
