@@ -34,7 +34,7 @@ export default class extends Controller {
       const nextSlide = currentSlide.nextElementSibling;
       const amountToMove = nextSlide.style.left;
 
-      track.style.transform = 'translateX(' + amountToMove + ')';
+      track.style.transform = 'translateX(-' + amountToMove + ')';
     });
 
     // When click the nav indicators, move to that slide
