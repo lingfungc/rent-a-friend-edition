@@ -266,10 +266,22 @@ $font-t: 'Outfit', sans-serif;
 
   .carousel_btn_left {
     left: -3rem;
+    transition: all 0.5s;
+
+    &:hover {
+      scale: 110%;
+      color: $theme-color;
+    }
   }
 
   .carousel_btn_right {
     right: -3rem;
+    transition: all 0.5s;
+
+    &:hover {
+      scale: 110%;
+      color: $theme-color;
+    }
   }
 
   .carousel_nav {
