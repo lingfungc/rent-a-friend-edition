@@ -48,7 +48,7 @@ export default class extends Controller {
       const prevSlide = currentSlide.previousElementSibling;
 
       const currentDot = dotsNav.querySelector('.current-slide');
-      const prevDot = currentDot.prevElementSibling;
+      const prevDot = currentDot.previousElementSibling;
 
       moveToSlide(track, currentSlide, prevSlide);
       updateDots(currentDot, prevDot);
