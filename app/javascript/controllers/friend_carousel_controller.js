@@ -54,7 +54,15 @@ export default class extends Controller {
     dotsNav.addEventListener('click', e => {
       // What indicator was clicked on?
       const targetDot = e.target.closest('button');
-      console.log(targetDot);
+      // console.log(targetDot);
+
+      // Stop the addEventListener function if any of the dots is not clicked
+      if (!targetDot) return;
+
+      const currentSlide = track.querySelector('.current-slide');
+      const currentDot = dotsNav.querySelector('.current-slide');
+      const targetIndex = dots.findIndex(dot => dot === targetDot);
+      console.log(targetIndex);
 
     })
   }
