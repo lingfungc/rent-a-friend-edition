@@ -96,13 +96,22 @@
 
       <br>
 
+      <div class="friend-info">
+
+        <div class="friend-bio">
+          <p><b>Bio:</b> <%= @friend.bio %></p>
+        </div>
+
+      </div>
+
+
         <div class="friend-photos-window">
 
           <div class="friend-photos-content">
 
             <div class="popup-close-btn">&times;</div>
 
-              <div class="carousel">
+              <div class="carousel" data-controller="friend-carousel">
 
                 <button class="carousel_button carousel_btn_left"><i class="fa-solid fa-angle-left"></i></button>
 
@@ -144,27 +153,12 @@
 
         </div>
 
-      <div class="friend-info">
 
-        <div class="friend-bio">
-        <p><b>Bio:</b> <%= @friend.bio %></p>
-        </div>
-      </div>
     </div>
 
 
-    <%= simple_form_for [@friend, @favourite] do |x| %>
-
-    <%= button_tag(type: 'submit', class: 'btn') do %>
-      <div class="">
-        <i class="fa-solid fa-heart dish-fa-heart"></i>
-      </div>
-    <% end %>
-
-  <% end %>
-
-
     <hr>
+
 
     <div class="friend-card-bottom">
       <div class="friend-form">
