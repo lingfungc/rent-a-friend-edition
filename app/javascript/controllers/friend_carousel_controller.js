@@ -51,6 +51,11 @@ export default class extends Controller {
     });
 
     // When click the nav indicators, move to that slide
+    dotsNav.addEventListener('click', e => {
+      // What indicator was clicked on?
+      const targetDot = e.target.closest('button');
+      console.log(targetDot);
 
+    })
   }
 }
