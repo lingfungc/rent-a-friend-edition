@@ -15,7 +15,8 @@
           <% else %>
             <div class="friend-star"><i class="fa-solid fa-star"></i></div><strong><%= @friend.rating.round(1) %></strong>
           <% end %>
-        </span><span>•</span>
+        </span>
+        <span>•</span>
         <%= @friend.location %>
       </div>
 
@@ -90,75 +91,53 @@
           <% end %>
         </div>
 
-
-
       </div>
 
       <br>
 
       <div class="friend-info">
-
         <div class="friend-bio">
           <p><b>Bio:</b> <%= @friend.bio %></p>
         </div>
-
       </div>
 
-
         <div class="friend-photos-window">
-
           <div class="friend-photos-content">
 
             <div class="popup-close-btn">&times;</div>
+            <div class="carousel" data-controller="friend-carousel">
 
-              <div class="carousel" data-controller="friend-carousel">
+              <button class="carousel_button carousel_btn_left is-hidden"><i class="fa-solid fa-angle-left"></i></button>
 
-                <button class="carousel_button carousel_btn_left is-hidden"><i class="fa-solid fa-angle-left"></i></button>
-
-                <div class="carousel_tracker-container">
-
-                  <ul class="carousel_track">
-
-                    <li class="carousel_slide current-slide">
-                      <%= cl_image_tag @friend.photos.first.key, class: "carousel_img current_img", alt: "" %>
+              <div class="carousel_tracker-container">
+                <ul class="carousel_track">
+                  <li class="carousel_slide current-slide">
+                    <%= cl_image_tag @friend.photos.first.key, class: "carousel_img current_img", alt: "" %>
+                  </li>
+                  <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
+                    <li class="carousel_slide">
+                      <%= cl_image_tag photo.key, class: "carousel_img", alt: "" %>
                     </li>
-
-                    <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
-
-                      <li class="carousel_slide">
-                        <%= cl_image_tag photo.key, class: "carousel_img", alt: "" %>
-                      </li>
-
-                    <% end %>
-
-
-                  </ul>
-
-                </div>
-
-                <button class="carousel_button carousel_btn_right"><i class="fa-solid fa-angle-right"></i></button>
-
-                <div class="carousel_nav">
-                    <button class="carousel_indicator current-slide"></button>
-                  <% (@friend.photos.count - 1).times do %>
-                    <button class="carousel_indicator"></button>
                   <% end %>
-                </div>
+                </ul>
+              </div>
 
+              <button class="carousel_button carousel_btn_right"><i class="fa-solid fa-angle-right"></i></button>
+
+              <div class="carousel_nav">
+                  <button class="carousel_indicator current-slide"></button>
+                <% (@friend.photos.count - 1).times do %>
+                  <button class="carousel_indicator"></button>
+                <% end %>
               </div>
 
             </div>
 
           </div>
-
         </div>
-
-
     </div>
 
-
     <hr>
-
 
     <div class="friend-card-bottom">
       <div class="friend-form">
