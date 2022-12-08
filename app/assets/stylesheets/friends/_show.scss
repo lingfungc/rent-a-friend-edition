@@ -220,6 +220,21 @@ $font-t: 'Outfit', sans-serif;
     width: 80%;
     margin: 0 auto;
   }
+
+  .carousel_img {
+    width: 100%;
+  }
+
+  .carousel_tracker-container {
+    background: lightblue;
+    padding: 10px;
+  }
+
+  .carousel_track {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 }
 
 
