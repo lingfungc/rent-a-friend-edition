@@ -240,6 +240,7 @@ $font-t: 'Outfit', sans-serif;
     list-style: none;
     position: relative;
     height: 100%;
+    transition: transform 0.5s;
   }
 
   .carousel_slide {
