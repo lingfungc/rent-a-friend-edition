@@ -27,6 +27,15 @@ export default class extends Controller {
     slides.forEach(setSlidePosition);
 
     // When click left, move slide to left
+    prevBtn.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide');
+      const nextSlide = currentSlide.nextElementSibling;
+      const amountToMove = nextSlide.style.left;
+
+      track.style.transform = 'translateX(-' + amountToMove + ')';
+      currentSlide.classList.remove('current-slide');
+      nextSlide.classList.add('current-slide');
+    });
 
     // When click right, move slide to right
     nextBtn.addEventListener('click', e => {
