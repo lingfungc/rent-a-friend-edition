@@ -223,17 +223,27 @@ $font-t: 'Outfit', sans-serif;
 
   .carousel_img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .carousel_tracker-container {
+    position: relative;
     background: lightblue;
-    padding: 10px;
+    height: 100%;
   }
 
   .carousel_track {
     margin: 0;
     padding: 0;
     list-style: none;
+  }
+
+  .carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
   }
 }
 
