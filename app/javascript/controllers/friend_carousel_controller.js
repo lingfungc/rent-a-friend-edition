@@ -7,15 +7,17 @@ export default class extends Controller {
 
     // The ul div that contains all photos slide
     const track = document.querySelector('.carousel_track');
-    console.log(track);
+    // console.log(track);
 
     const slides = Array.from(track.children);
-    console.log(slides);
+    // console.log(slides);
 
     const nextBtn = document.querySelector('.carousel_btn_right');
     const prevBtn = document.querySelector('.carousel_btn_left');
     const dotsNav = document.querySelector('.carousel_nav');
+    // console.log(dotsNav);
     const dots = Array.from(dotsNav.children);
+    // console.log(dots);
 
     // const slideSize = slides[0].getBoundingClientRect();
     // const slideWidth = slideSize.width;
@@ -35,11 +37,21 @@ export default class extends Controller {
       targetSlide.classList.add('current-slide');
     }
 
+    const updateDots = (currentDot, targetDot) => {
+      currentDot.classList.remove('current-slide');
+      targetDot.classList.add('current-slide');
+    }
+
     // When click left, move slide to left
     prevBtn.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide');
       const prevSlide = currentSlide.previousElementSibling;
+
+      const currentDot = dotsNav.querySelector('.current-slide');
+      const prevDot = currentDot.prevElementSibling;
+
       moveToSlide(track, currentSlide, prevSlide);
+      updateDots(currentDot, prevDot);
     })
 
     // When click right, move slide to right
@@ -47,7 +59,12 @@ export default class extends Controller {
       const currentSlide = track.querySelector('.current-slide');
       const nextSlide = currentSlide.nextElementSibling;
       // const amountToMove = nextSlide.style.left;
+
+      const currentDot = dotsNav.querySelector('.current-slide');
+      const nextDot = currentDot.nextElementSibling;
+
       moveToSlide(track, currentSlide, nextSlide);
+      updateDots(currentDot, nextDot);
     });
 
     // When click the nav indicators, move to that slide
@@ -67,6 +84,7 @@ export default class extends Controller {
       // console.log(targetSlide);
 
       moveToSlide(track, currentSlide, targetSlide);
+      updateDots(currentDot, targetDot);
     })
   }
 }

@@ -46,31 +46,31 @@ export default class extends Controller {
 
     startDateInput.addEventListener('change', (e) => {
       let calendars = document.querySelectorAll(".flatpickr-calendar");
-      console.log(calendars);
+      // console.log(calendars);
 
       let endDateCalendar = calendars[calendars.length - 1];
-      console.log(endDateCalendar);
+      // console.log(endDateCalendar);
 
       let startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
-      console.log(startDate);
+      // console.log(startDate);
 
       let selectedStartDate = startDate[startDate.length - 1];
       selectedStartDate.classList.add('startDate');
     })
 
     const prevMonth = document.querySelectorAll(".flatpickr-prev-month");
-    console.log(prevMonth);
+    // console.log(prevMonth);
 
     prevMonth[prevMonth.length - 1].addEventListener('click', (event) => {
 
       let calendars = document.querySelectorAll(".flatpickr-calendar");
-      console.log(calendars);
+      // console.log(calendars);
 
       let endDateCalendar = calendars[calendars.length - 1];
-      console.log(endDateCalendar);
+      // console.log(endDateCalendar);
 
       let startDate = endDateCalendar.querySelectorAll('.flatpickr-disabled');
-      console.log(startDate);
+      // console.log(startDate);
 
       let selectedStartDate = startDate[startDate.length - 1];
       selectedStartDate.classList.add('startDate');
