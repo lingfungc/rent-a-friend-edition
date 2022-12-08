@@ -42,6 +42,19 @@ export default class extends Controller {
       targetDot.classList.add('current-slide');
     }
 
+    const hideShowArrows = (slides, prevBtn, nextBtn, targetIndex) => {
+      if (targetIndex === 0) {
+        prevBtn.classList.add('is-hidden');
+        nextBtn.classList.remove('is-hidden');
+      } else if (targetIndex === slides.length - 1) {
+        prevBtn.classList.remove('is-hidden');
+        nextBtn.classList.add('is-hidden');
+      } else {
+        prevBtn.classList.remove('is-hidden');
+        nextBtn.classList.remove('is-hidden');
+      }
+    }
+
     // When click left, move slide to left
     prevBtn.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide');
@@ -86,16 +99,7 @@ export default class extends Controller {
       moveToSlide(track, currentSlide, targetSlide);
       updateDots(currentDot, targetDot);
 
-      if (targetIndex === 0) {
-        prevBtn.classList.add('is-hidden');
-        nextBtn.classList.remove('is-hidden');
-      } else if (targetIndex === slides.length - 1) {
-        prevBtn.classList.remove('is-hidden');
-        nextBtn.classList.add('is-hidden');
-      } else {
-        prevBtn.classList.remove('is-hidden');
-        nextBtn.classList.remove('is-hidden');
-      }
+      hideShowArrows(slides, prevBtn, nextBtn, targetIndex);
     })
   }
 }
