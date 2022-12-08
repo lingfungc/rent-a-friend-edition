@@ -110,7 +110,11 @@
 
                   <ul class="carousel_track">
 
-                    <% @friend.photos.each do |photo| %>
+                    <li class="carousel_slide">
+                      <%= cl_image_tag @friend.photos.first.key, class: "carousel_img current_img", alt: "" %>
+                    </li>
+
+                    <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
 
                       <li class="carousel_slide">
                         <%= cl_image_tag photo.key, class: "carousel_img", alt: "" %>
@@ -123,10 +127,11 @@
 
                 </div>
 
-                <button class="carousel_button carousel_btn_left"><i class="fa-solid fa-angle-right"></i></button>
+                <button class="carousel_button carousel_btn_right"><i class="fa-solid fa-angle-right"></i></button>
 
                 <div class="carousel_nav">
-                  <% @friend.photos.count.times do %>
+                    <button class="carousel_indicator current-slide"></button>
+                  <% (@friend.photos.count - 1).times do %>
                     <button class="carousel_indicator"></button>
                   <% end %>
                 </div>
