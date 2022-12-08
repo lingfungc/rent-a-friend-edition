@@ -62,8 +62,11 @@ export default class extends Controller {
       const currentSlide = track.querySelector('.current-slide');
       const currentDot = dotsNav.querySelector('.current-slide');
       const targetIndex = dots.findIndex(dot => dot === targetDot);
-      console.log(targetIndex);
+      // console.log(targetIndex);
+      const targetSlide = slides[targetIndex];
+      // console.log(targetSlide);
 
+      moveToSlide(track, currentSlide, targetSlide);
     })
   }
 }
