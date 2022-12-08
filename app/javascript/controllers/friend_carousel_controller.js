@@ -23,9 +23,11 @@ export default class extends Controller {
     const slideWidth = slides[0].getBoundingClientRect().width;
 
     // Arrange the slides next to one aonther
-    slides.forEach((slide, index) => {
+    const setSlidePosition = (slide, index) => {
       slide.style.left = slideWidth * index + 'px';
-    });
+    };
+
+    slides.forEach(setSlidePosition);
 
 
 
