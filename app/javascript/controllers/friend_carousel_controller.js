@@ -62,9 +62,11 @@ export default class extends Controller {
 
       const currentDot = dotsNav.querySelector('.current-slide');
       const prevDot = currentDot.previousElementSibling;
+      const prevIndex = slides.findIndex(slide => slide === prevSlide);
 
       moveToSlide(track, currentSlide, prevSlide);
       updateDots(currentDot, prevDot);
+      hideShowArrows(slides, prevBtn, nextBtn, prevIndex);
     })
 
     // When click right, move slide to right
@@ -75,9 +77,11 @@ export default class extends Controller {
 
       const currentDot = dotsNav.querySelector('.current-slide');
       const nextDot = currentDot.nextElementSibling;
+      const nextIndex = slides.findIndex(slide => slide === nextSlide);
 
       moveToSlide(track, currentSlide, nextSlide);
       updateDots(currentDot, nextDot);
+      hideShowArrows(slides, prevBtn, nextBtn, nextIndex);
     });
 
     // When click the nav indicators, move to that slide
