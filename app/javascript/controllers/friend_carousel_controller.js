@@ -5,6 +5,7 @@ export default class extends Controller {
   connect() {
     console.log("Connected to Friend Carousel Stimulus");
 
+    // The ul div that contains all photos slide
     const track = document.querySelector('.carousel_track');
     console.log(track);
 
@@ -26,26 +27,27 @@ export default class extends Controller {
     };
     slides.forEach(setSlidePosition);
 
+
+    // Don't repeat yourself, so create a function
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+      currentSlide.classList.remove('current-slide');
+      targetSlide.classList.add('current-slide');
+    }
+
     // When click left, move slide to left
     prevBtn.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide');
-      const nextSlide = currentSlide.nextElementSibling;
-      const amountToMove = nextSlide.style.left;
-
-      track.style.transform = 'translateX(-' + amountToMove + ')';
-      currentSlide.classList.remove('current-slide');
-      nextSlide.classList.add('current-slide');
-    });
+      const prevSlide = currentSlide.previousElementSibling;
+      moveToSlide(track, currentSlide, prevSlide);
+    })
 
     // When click right, move slide to right
     nextBtn.addEventListener('click', e => {
       const currentSlide = track.querySelector('.current-slide');
       const nextSlide = currentSlide.nextElementSibling;
-      const amountToMove = nextSlide.style.left;
-
-      track.style.transform = 'translateX(-' + amountToMove + ')';
-      currentSlide.classList.remove('current-slide');
-      nextSlide.classList.add('current-slide');
+      // const amountToMove = nextSlide.style.left;
+      moveToSlide(track, currentSlide, nextSlide);
     });
 
     // When click the nav indicators, move to that slide
