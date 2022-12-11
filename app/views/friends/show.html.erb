@@ -78,7 +78,7 @@
       <div class="friend-img" data-controller="friend-img-swap">
 
         <div class="friend-img-left" data-controller="friend-photos-popup" data-friend-img-swap-target="main">
-          <%= cl_image_tag @friend.photos.first.key %>
+          <%= cl_image_tag @friend.photos.first.key, class: "current-img" %>
         </div>
 
         <div class="friend-img-right">
