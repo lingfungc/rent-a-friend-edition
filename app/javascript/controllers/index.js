@@ -19,6 +19,9 @@ application.register("flatpickr", FlatpickrController)
 import FriendCarouselController from "./friend_carousel_controller"
 application.register("friend-carousel", FriendCarouselController)
 
+import FriendImgSwapController from "./friend_img_swap_controller"
+application.register("friend-img-swap", FriendImgSwapController)
+
 import FriendPhotosPopupController from "./friend_photos_popup_controller"
 application.register("friend-photos-popup", FriendPhotosPopupController)
 
