@@ -102,7 +102,6 @@ export default class extends Controller {
 
       moveToSlide(track, currentSlide, targetSlide);
       updateDots(currentDot, targetDot);
-
       hideShowArrows(slides, prevBtn, nextBtn, targetIndex);
     })
   }
