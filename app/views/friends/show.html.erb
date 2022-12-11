@@ -77,15 +77,13 @@
 
       <div class="friend-img" data-controller="friend-img-swap">
 
-        <div class="friend-img-left" data-controller="friend-photos-popup">
-          <%# <div class="photo"> %>
-            <%= cl_image_tag @friend.photos.first.key %>
-          <%# </div> %>
+        <div class="friend-img-left" data-controller="friend-photos-popup" data-friend-img-swap-target="main">
+          <%= cl_image_tag @friend.photos.first.key %>
         </div>
 
         <div class="friend-img-right">
           <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
-            <div class="photo" data-action="click->friend-img-swap#swap">
+            <div class="photo" data-action="click->friend-img-swap#swap" data-friend-img-swap-target="sub">
               <%= cl_image_tag photo.key, class: 'cl_img' %>
             </div>
           <% end %>
