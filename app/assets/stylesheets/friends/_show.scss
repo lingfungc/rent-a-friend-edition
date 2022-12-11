@@ -205,15 +205,20 @@ $font-t: 'Outfit', sans-serif;
 }
 
 .friend-photos-window {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: white;
-//   overflow: hidden;
-//   z-index: 10;
-  height: 780px;
+
+  // position: fixed;
+  // top: -100vh;
+  // height: 100vh;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  background-color: white;
+  overflow: hidden;
+  z-index: 10;
+  transition: 0.3s all ease-in-out;
 
   .carousel {
     position: relative;
