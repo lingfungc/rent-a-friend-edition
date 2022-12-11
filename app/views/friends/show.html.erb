@@ -86,7 +86,7 @@
         <div class="friend-img-right">
           <% @friend.photos.slice(1, @friend.photos.count).each do |photo| %>
             <div class="photo">
-              <%= cl_image_tag photo.key, class: 'cl_img'  %>
+              <%= cl_image_tag photo.key, class: 'cl_img' %>
             </div>
           <% end %>
         </div>
