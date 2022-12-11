@@ -10,8 +10,7 @@ export default class extends Controller {
 
   swap() {
     console.log("Connected to Friend Img Swap Stimulus Swap Method");
-    console.log(this.mainTarget);
-    console.log(this.subTarget);
-    // this.subTarget.classList.add("d-none");
+    // console.log(this.mainTarget);
+    // console.log(this.subTarget);
   }
 }
