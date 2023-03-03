@@ -5,22 +5,22 @@ class FriendsController < ApplicationController
 
     # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
 
-    @friends = Friend.order('updated_at desc')
+    # @friends = Friend.order('updated_at desc')
 
-    if params[:trending].present?
-      @friends = Friend.joins(:bookings)
-                       .select('friends.*, count(bookings) as friend_booking')
-                       .group('friends.id')
-                       .order('friend_booking desc')
-                       .limit(20)
-    end
+    # if params[:trending].present?
+    #   @friends = Friend.joins(:bookings)
+    #                    .select('friends.*, count(bookings) as friend_booking')
+    #                    .group('friends.id')
+    #                    .order('friend_booking desc')
+    #                    .limit(20)
+    # end
 
-    if params[:new].present?
-      @friends = Friend.order('created_at desc')
-                       .limit(20)
-    end
+    # if params[:new].present?
+    #   @friends = Friend.order('created_at desc')
+    #                    .limit(20)
+    # end
 
-    @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%").order('updated_at desc') if params[:categories].present?
+    # @friends = Friend.where("categories iLIKE ?", "%#{params[:categories]}%").order('updated_at desc') if params[:categories].present?
     @friends = Friend.search_by_categories_and_location_and_age(params[:query]).order('updated_at desc') if params[:query].present?
     # raise
 
@@ -52,7 +52,7 @@ class FriendsController < ApplicationController
     if @friend.save
       redirect_to friend_path(@friend)
     else
-      @categories = Friend::CATEGORIES
+      # @categories = Friend::CATEGORIES
       render :new, status: :unprocessable_entity
     end
   end

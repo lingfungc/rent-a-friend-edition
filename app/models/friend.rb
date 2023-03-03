@@ -19,7 +19,7 @@ class Friend < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_categories_and_location_and_age,
-  against: [ :categories, :location, :age ],
+  against: [ :categories, :location, :age, :first_name, :last_name ],
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
