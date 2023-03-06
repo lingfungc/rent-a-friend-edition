@@ -1,9 +1,9 @@
 class FriendsController < ApplicationController
   def index
     @friends = Friend.all
-    # @friends = Friend.filter(params.slice(:catagories))
 
-    @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
+    # @friends = Friend.filter(params.slice(:catagories))
+    # @friends = @friends.filter_by_categories(params[:catagories]) if params[:categories].present?
 
     @friends = Friend.order('updated_at desc')
 
