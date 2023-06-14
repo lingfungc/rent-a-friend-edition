@@ -1,4 +1,6 @@
 class BookingsController < ApplicationController
+  # Heroku
+
   def new
     @booking = Booking.new
     @friend = Friend.find(params[:friend_id])
